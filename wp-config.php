@@ -23,7 +23,7 @@ define('WP_CACHE', true); // Added by W3 Total Cache
 
 // ** Thiết lập MySQL - Bạn có thể lấy các thông tin này từ host/server ** //
 /** Tên database MySQL */
-define( 'DB_NAME', 'luckyscent' );
+define( 'DB_NAME', 'gowatch' );
 
 /** Username của database */
 define( 'DB_USER', 'root' );

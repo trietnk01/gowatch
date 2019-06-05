@@ -23,18 +23,26 @@
         font-size: 14px;
         text-transform: uppercase;
         background: transparent;
-        padding: 15px 12px;
+        padding-top: 40px;
+        padding-bottom:40px;
+        padding-left: 15px;
+        padding-right: 15px;
         border-right: 0;
         @media(max-width: 1024px){
           padding: 15px 8px;
           font-size: 12px;
         }
         &:link,&:visited{
-          color: #333333;
+          color: $mau_1;
         }
         &:hover,&.selected{
           color: $mau_1;
           background:transparent !important;
+        }
+      }
+      &:nth-child(5){
+        a{
+          padding-left: 165px;
         }
       }
       &:last-child{
