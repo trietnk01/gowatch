@@ -103,6 +103,8 @@ header{
 }
 .box-doi-tac{
 	margin-top: 30px;
+	border-bottom: 1px solid $mau_1;
+	padding-bottom: 10px;
 	.owl-carousel-brand{
 		.owl-prev {
 			position: absolute;
@@ -150,6 +152,106 @@ header{
 			&:hover{
 				background:transparent;
 				color: $mau_1;
+			}
+		}
+	}
+}
+.khuyen-mai-box{
+	margin-top: 30px;
+	.khuyen-mai-theo-ngay{
+		font-family: $f_bold;
+		text-transform: uppercase;
+		font-size:30px;
+		text-align: center;
+		@media(max-width: 375px){
+			font-size: 25px;
+		}
+		@media(max-width: 320px){
+			font-size: 20px;
+		}
+		@media(max-width: 240px){
+			font-size: 17px;
+		}
+		&:after{
+			height: 2px;
+			width: 150px;
+			background:$mau_1;
+			content: "";
+			display: block;
+			margin: 10px auto 0 auto;
+		}
+	}
+	.owl-carousel-sale-off-on-day{
+		margin-top: 45px;
+		margin-bottom: 45px;
+		.sale-off-on-day-box-item{
+			.sale-off-box-hinh-tron{
+				border:1px solid $mau_1;
+				border-radius: 116px;
+				padding:40px;
+				position:relative;
+				@media(max-width: 375px){
+					border-radius: 172px;
+					padding: 60px;
+				}
+				.sale-off-box{
+					position: absolute;
+					bottom: 10px;
+					right: 0px;
+					background-color: $mau_1;
+					padding: 12px;
+					border-radius: 31px;
+					@media(max-width: 1024px){
+						padding:8px;
+					}
+					@media(max-width: 375px){
+						right: 40px;
+					}
+					@media(max-width: 320px){
+						bottom: 0px;
+						right: 35px;
+					}
+					@media(max-width: 240px){
+						bottom: -4px;
+						right: 18px;
+					}
+					.sale-off-txt{
+						color: #fff;
+						text-align: center;
+						font-size: 12px;
+					}
+					.sale-off-number{
+						color: #fff;
+						text-align: center;
+						font-family: $f_bold;
+					}
+				}
+			}
+			.sale-off-on-day-title{
+				text-align: center;
+				line-height: 20px;
+				margin-top: 10px;
+				border-bottom: 1px solid $mau_1;
+				padding-bottom: 10px;
+				a{
+					font-size: 14px;
+					color: $mau;
+					font-family: $f_bold;
+				}
+			}
+			.sale-off-on-day-price{
+				text-align: center;
+				margin-top: 10px;
+				.sale-off-on-day-sale-price{
+					font-family: $f_bold;
+					color: $mau_1;
+					font-size: 17px;
+				}
+				.sale-off-on-day-sale-original-price{
+					font-size: 12px;
+					text-decoration: line-through;
+					margin-left: 5px;
+				}
 			}
 		}
 	}
