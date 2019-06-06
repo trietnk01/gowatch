@@ -23,13 +23,10 @@
         font-size: 14px;
         text-transform: uppercase;
         background: transparent;
-        padding-top: 40px;
-        padding-bottom:40px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 40px 15px;
         border-right: 0;
         @media(max-width: 1024px){
-          padding: 15px 8px;
+          padding: 40px 10px;
           font-size: 12px;
         }
         &:link,&:visited{
@@ -42,7 +39,7 @@
       }
       &:nth-child(5){
         a{
-          padding-left: 165px;
+          padding-left: 140px;
         }
       }
       &:last-child{

@@ -1,18 +1,27 @@
 header{
 	.thay-pin-danh-bong-dong-ho{
 		background-color: #d1a02f;
-		padding:5px 0px;
+		padding:5px 10px;
 		.rana{
 			text-align: center;
 			color: #fff;
 			font-family: $f_regular;
 			text-transform: uppercase;
 			font-size: 13px;
+			@media(max-width: 992px){
+				display: none;
+			}
 		}
 		.gio-hang{
 			position: absolute;
 			right: 45px;
 			top: 0;
+			@media(max-width: 992px){
+				position: relative;
+				right: 0;
+				width: 115px;
+				margin:auto;
+			}
 			a{
 				color :#fff;
 				font-family: $f_regular;
@@ -36,6 +45,9 @@ header{
 	.menu-bg{
 		background-color: #111;
 		border-bottom: 2px solid $mau_1;
+		@media(max-width: 992px){
+			display: none;
+		}
 		.logo{
 			width: 60px;
 			height: 60px;
@@ -43,6 +55,23 @@ header{
 			top:15px;
 			left: 50%;
 			margin-left: -30px;
+		}
+	}
+	.mobile-navbar{
+		display: none;
+		@media(max-width: 992px){
+			display: block;
+		}
+		.mobile-menu{
+			list-style: none;
+			padding: 0 22px;
+			li{
+				a{
+					color: $mau_1;
+					display: block;
+					padding: 5px 0px;
+				}
+			}
 		}
 	}
 }
@@ -68,6 +97,59 @@ header{
 				span{
 					background: $mau_1;
 				}
+			}
+		}
+	}
+}
+.box-doi-tac{
+	margin-top: 30px;
+	.owl-carousel-brand{
+		.owl-prev {
+			position: absolute;
+			left: -70px;
+			top: 10px;
+			color: $mau_1;
+			background: transparent;
+			border-radius: 0;
+			padding: 0px 10px;
+			font-size: 30px;
+			@media(max-width: 1024px){
+				left: -45px;
+				top:5px;
+			}
+			@media(max-width: 992px){
+				left: -50px;
+			}
+			@media(max-width: 740px){
+				left: -65px;
+			}
+			&:hover{
+				background:transparent;
+				color: $mau_1;
+			}
+		}
+		.owl-next {
+			position: absolute;
+			right: -70px;
+			top: 10px;
+			color: $mau_1;
+			background: transparent;
+			border-radius: 0;
+			padding: 0px 10px;
+			font-size: 30px;
+			@media(max-width: 1024px){
+				right: -45px;
+				top:5px;
+			}
+			@media(max-width: 992px){
+				right: -50px;
+			}
+			@media(max-width: 740px){
+				right: -65px;
+			}
+			&:hover{
+				background:transparent;
+				color: $mau_1;
 			}
 		}
 	}
