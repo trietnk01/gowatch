@@ -106,4 +106,40 @@ jQuery(document).ready(function(){
             }
         }
     });
+    jQuery(".owl-carousel-customer").owlCarousel({
+        autoplay:false,
+        loop:true,
+        margin:50,
+        nav:true,
+        navText: ["<i class=\"fas fa-chevron-left\"></i>","<i class=\"fas fa-chevron-right\"></i>"],
+        dots:false,
+        mouseDrag: true,
+        touchDrag: true,
+        lazyLoad: true,
+        responsiveClass:true,
+        responsive:{
+            240:{
+                items:1,
+                margin:0,
+                nav:false,
+            },
+            360:{
+                items:2,
+                margin:30,
+                nav:false,
+            },
+            374:{
+                items:2,
+                margin:40,
+                nav:false,
+            },
+            740:{
+                items:2,
+                margin:70,
+            },
+            768:{
+                items:3,
+            }
+        }
+    });
 });

@@ -556,6 +556,38 @@ header{
 	}
 	.box-featured-news{
 		margin-top: 30px;
+		.news-readmore{
+			text-align: center;
+			margin-top: 30px;
+			a{
+				color: $mau_1;
+				padding:5px 20px;
+				text-transform: uppercase;
+				position: relative;
+				overflow: hidden;
+				z-index: 1;
+				display: inline-block;
+				border:2px solid $mau_1;
+				font-family: $f_bold;
+				&:before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 100%;
+					width: 100%;
+					height: 100%;
+					background:$mau_1;
+					z-index: -1;
+					@include p-web(transition, all 0.5s);
+				}
+				&:hover{
+					&:before{
+						left: 0;
+					}
+					color: #fff;
+				}
+			}
+		}
 		.box-item-news{
 			.box-item-news-img{
 				a{
@@ -630,6 +662,145 @@ header{
 				margin-top: 10px;
 				text-align: justify;
 			}
+		}
+	}
+}
+.content-bottom{
+	background: #f1f1f1;
+	padding: 40px 0;
+	margin-top: 40px;
+	.ryse-of-rome{
+		width: 700px;
+		margin:0 auto;
+		@media(max-width: 740px){
+			width:100%;
+		}
+		.owl-carousel-customer{
+			.owl-prev {
+				position: absolute;
+				left: -70px;
+				top: 70px;
+				color: $mau_1;
+				background: transparent;
+				border-radius: 0;
+				padding: 0px 10px;
+				font-size: 30px;
+				@media(max-width: 1024px){
+					left: -70px;
+					top: 65px;
+				}
+				@media(max-width: 992px){
+					left: -65px;
+				}
+				@media(max-width: 740px){
+					top: 75px;
+				}
+				&:hover{
+					background:transparent;
+					color: $mau_1;
+				}
+			}
+			.owl-next {
+				position: absolute;
+				right: -70px;
+				top: 70px;
+				color: $mau_1;
+				background: transparent;
+				border-radius: 0;
+				padding: 0px 10px;
+				font-size: 30px;
+				@media(max-width: 1024px){
+					right: -70px;
+					top: 65px;
+				}
+				@media(max-width: 992px){
+					right: -65px;
+				}
+				@media(max-width: 740px){
+					top: 75px;
+				}
+				&:hover{
+					background:transparent;
+					color: $mau_1;
+				}
+			}
+			.box-customer{
+				.box-customer-img{
+					a{
+						display: block;
+						padding:10px;
+						border-radius: 106px;
+						border: 1px solid $mau_1;
+						@media(max-width: 320px){
+							border-radius: 145px;
+						}
+						img{
+							border-radius: 102px;
+							@media(max-width: 320px){
+								border-radius: 135px;
+							}
+						}
+					}
+				}
+				.box-customer-title{
+					text-transform: uppercase;
+					font-family: $f_bold;
+					font-size: 15px;
+					text-align: center;
+					margin-top: 20px;
+				}
+				.box-customer-excerpt{
+					text-align: center;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+footer{
+	background: #111;
+	padding:50px 0;
+	.dang-ky-thong-tin-moi-tu-go-watch{
+		color: $mau_1;
+		text-transform: uppercase;
+		font-family: $f_bold;
+		margin-top: 10px;
+		font-size: 13px;
+	}
+	.dang-ky-ngay-box{
+		position: relative;
+		width: 265px;
+		margin-top: 10px;
+		.dang-ky-ngay-txt{
+			width: 80%;
+			input{
+				background: #444444;
+				border: 0;
+				outline: 0;
+				padding: 7px 10px;
+				color: #fff;
+				width: 100%;
+			}
+		}
+		.dang-ky-ngay-btn{
+			position: absolute;
+			right: 0;
+			top: 0;
+			a{
+				display: block;
+				color: $mau_1;
+				padding: 8px 15px;
+				text-transform: uppercase;
+				background: #444444;
+				font-size: 13px;
+				font-family: $f_bold;
+				z-index: 9999;
+			}
+		}
+		.ajax-box{
+			position: absolute;
+			right: -20px;
+			top: -5px;
 		}
 	}
 }

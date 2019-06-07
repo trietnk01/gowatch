@@ -90,7 +90,7 @@
                                             <div class="sale-off-number">28%</div>
                                         </div>
                                     </div>
-                                    <h3 class="sale-off-on-day-title"><a href="<?php echo site_url( '', null ); ?>">Đồng Hồ Michael Kors Chính Hãng Nữ MK3821 Camille Pavé Bracelet Rose Gold Watch</a></h3>
+                                    <h3 class="sale-off-on-day-title"><a href="<?php echo site_url( '', null ); ?>"><?php echo wp_trim_words( "Đồng Hồ Michael Kors Chính Hãng Nữ MK3821 Camille Pavé Bracelet Rose Gold Watch",55, "[...]" ) ?></a></h3>
                                     <div class="sale-off-on-day-price">
                                         <span class="sale-off-on-day-sale-price">4.900.000 ₫</span>
                                         <span class="sale-off-on-day-sale-original-price">6.800.000 ₫</span>
@@ -255,7 +255,7 @@
                                             <div class="sale-off-number">28%</div>
                                         </div>
                                     </div>
-                                    <h3 class="sale-off-on-day-title"><a href="<?php echo site_url( '', null ); ?>">Đồng Hồ Michael Kors Chính Hãng Nữ MK3821 Camille Pavé Bracelet Rose Gold Watch</a></h3>
+                                    <h3 class="sale-off-on-day-title"><a href="<?php echo site_url( '', null ); ?>"><?php echo wp_trim_words( "Đồng Hồ Michael Kors Chính Hãng Nữ MK3821 Camille Pavé Bracelet Rose Gold Watch",55, "[...]" ) ?></a></h3>
                                     <div class="sale-off-on-day-price">
                                         <span class="sale-off-on-day-sale-price">4.900.000 ₫</span>
                                         <span class="sale-off-on-day-sale-original-price">6.800.000 ₫</span>
@@ -299,9 +299,45 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <h3 class="box-item-news-title"><a href="<?php echo site_url( '', null ); ?>"><?php echo wp_trim_words( "Những mẫu đồng hồ Michael Kors chính hãng được “tín đồ” sùng bái nhất", 25,null ); ?></a></h3>
+                                        <h3 class="box-item-news-title"><a href="<?php echo site_url( '', null ); ?>"><?php echo wp_trim_words( "Những mẫu đồng hồ Michael Kors chính hãng được “tín đồ” sùng bái nhất", 25,"[...]" ); ?></a></h3>
                                         <div class="box-item-news-excerpt">
-                                            <?php echo wp_trim_words( "Michael Kors là một trong những thương hiệu đồng hồ được yêu thích nhất hiện nay và được giới trẻ săn đón rất nhiều. Mẫu đồng hồ Michael Kors chính hãng luôn nhận được sự chào đón nồng hậu từ…",55,null ); ?>
+                                            <?php echo wp_trim_words( "Michael Kors là một trong những thương hiệu đồng hồ được yêu thích nhất hiện nay và được giới trẻ săn đón rất nhiều. Mẫu đồng hồ Michael Kors chính hãng luôn nhận được sự chào đón nồng hậu từ…",55,"[...]" ); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                        <div class="row news-readmore">
+                            <div class="col">
+                                <a href="<?php echo site_url( '',null ); ?>">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="ryse-of-rome">
+                        <div class="owl-carousel-customer owl-carousel owl-theme owl-loaded">
+                            <?php
+                            for($i=0;$i<27;$i++) {
+                                ?>
+                                <div class="item">
+                                    <div class="box-customer">
+                                        <div class="box-customer-img">
+                                            <a href="javascript:void(0);">
+                                                <img src="<?php echo wp_upload_dir( null,true,false )["url"]."/customer.jpg"; ?>">
+                                            </a>
+                                        </div>
+                                        <h4 class="box-customer-title"><?php echo wp_trim_words( "Ca sĩ Nguyên Vũ", 55,"[...]" ); ?></h4>
+                                        <div class="box-customer-excerpt">
+                                            <?php echo wp_trim_words( "Vũ chỉ cần lên website GoWatch.Vn chọn mẫu và để lại số điện thoại là ngay lập tức có nhân viên gọi lại tư vấn rất tận tình.Hy vọng GoWatch sẽ tiến xa hơn nhé. Vũ rất ưng ý với mẫu đồng hồ này.", 55, "[...]" ); ?>
                                         </div>
                                     </div>
                                 </div>
