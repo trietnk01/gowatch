@@ -58,7 +58,7 @@ jQuery(document).ready(function(){
         }
     });
     jQuery(".owl-carousel-sale-off-on-day").owlCarousel({
-        autoplay:false,
+        autoplay:true,
         loop:true,
         margin:60,
         nav:false,
@@ -86,6 +86,23 @@ jQuery(document).ready(function(){
             },
             1024:{
                 items:4
+            }
+        }
+    });
+    jQuery(".owl-carousel-spbc").owlCarousel({
+        autoplay:false,
+        loop:true,
+        margin:0,
+        nav:false,
+        navText: ["<i class=\"fas fa-chevron-left\"></i>","<i class=\"fas fa-chevron-right\"></i>"],
+        dots:true,
+        mouseDrag: true,
+        touchDrag: true,
+        lazyLoad: true,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1
             }
         }
     });
