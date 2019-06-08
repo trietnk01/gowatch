@@ -332,7 +332,7 @@
                                     <div class="box-customer">
                                         <div class="box-customer-img">
                                             <a href="javascript:void(0);">
-                                                <img src="<?php echo wp_upload_dir( null,true,false )["url"]."/customer.jpg"; ?>">
+                                                <img src="<?php echo wp_upload_dir( null,true,false )["url"]."/customer.jpg"; ?>" alt="">
                                             </a>
                                         </div>
                                         <h4 class="box-customer-title"><?php echo wp_trim_words( "Ca sĩ Nguyên Vũ", 55,"[...]" ); ?></h4>
