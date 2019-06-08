@@ -5,6 +5,37 @@ Footer template
 
 */
 ?>
+<div class="content-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="ryse-of-rome">
+          <div class="owl-carousel-customer owl-carousel owl-theme owl-loaded">
+            <?php
+            for($i=0;$i<27;$i++) {
+              ?>
+              <div class="item">
+                <div class="box-customer">
+                  <div class="box-customer-img">
+                    <a href="javascript:void(0);">
+                      <img src="<?php echo wp_upload_dir( null,true,false )["url"]."/customer.jpg"; ?>" alt="">
+                    </a>
+                  </div>
+                  <h4 class="box-customer-title"><?php echo wp_trim_words( "Ca sĩ Nguyên Vũ", 55,"[...]" ); ?></h4>
+                  <div class="box-customer-excerpt">
+                    <?php echo wp_trim_words( "Vũ chỉ cần lên website GoWatch.Vn chọn mẫu và để lại số điện thoại là ngay lập tức có nhân viên gọi lại tư vấn rất tận tình.Hy vọng GoWatch sẽ tiến xa hơn nhé. Vũ rất ưng ý với mẫu đồng hồ này.", 55, "[...]" ); ?>
+                  </div>
+                </div>
+              </div>
+              <?php
+            }
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <footer>
   <div class="container">
     <div class="row">

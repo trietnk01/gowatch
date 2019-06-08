@@ -131,107 +131,20 @@
                 <div class="col">
                     <div class="tai-sao-nen-mua">
                         <div class="tai-sao-nen-mua-text">Tại sao nên mua đồng hồ</div>
-                        <h2 class="tai-sao-nen-mua-h">Tại <?php echo get_bloginfo( 'name', 'raw' ); ?> ?</h2>
+                        <h2 class="khuyen-mai-theo-ngay margin-top-20">Tại <?php echo get_bloginfo( 'name', 'raw' ); ?> ?</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="renu-gowatch">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2 class="hon-mot-trieu-nguoi-tin-dung">Hơn 1 triệu người tin dùng</h2>
-                    <h2 class="chung-toi-cam-ket">Chúng tôi cam kết mang lại những giá trị cao nhất cho khách hàng khi đến với <?php echo get_bloginfo( 'name', 'raw' ); ?></h2>
-                </div>
-            </div>
-        </div>
-        <div class="box-slogan">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="box-item-slogan">
-                            <div class="box-item-sl-img">
-                                <div style="background-image: url('<?php echo wp_upload_dir(null,true,false )["url"]."/logo-4.png"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
-                            </div>
-                            <div class="box-item-sl-info">
-                                <h3 class="box-item-sl-title">Uy tín hàng đầu</h3>
-                                <div class="box-item-sl-excerpt">Với kinh nghiệm hơn 8 năm trong ngành đồng hồ, GOWATCH tự tin đem đến cho bạn những chiếc đồng hồ tốt nhất cùng trải nghiệm tuyệt vời khi mua đồng hồ tại GOWATCH</div>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-item-slogan">
-                            <div class="box-item-sl-img">
-                                <div style="background-image: url('<?php echo wp_upload_dir(null,true,false )["url"]."/logo-4.png"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
-                            </div>
-                            <div class="box-item-sl-info">
-                                <h3 class="box-item-sl-title">ĐỔI HÀNG DỄ DÀNG - MIỄN PHÍ</h3>
-                                <div class="box-item-sl-excerpt">Đồng hồ sai kích cỡ? Màu sắc không hợp với bạn? Bạn mua làm quà tặng người thân nhưng người nhận không ưng ý? Đừng lo! Bạn có thể đổi hàng trong vòng 7 ngày</div>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-item-slogan">
-                            <div class="box-item-sl-img">
-                                <div style="background-image: url('<?php echo wp_upload_dir(null,true,false )["url"]."/logo-4.png"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
-                            </div>
-                            <div class="box-item-sl-info">
-                                <h3 class="box-item-sl-title">THANH TOÁN DỄ DÀNG (COD)</h3>
-                                <div class="box-item-sl-excerpt">Bạn chỉ phải trả tiền khi đã nhận được hàng! Ngay Tại Nhà Bạn! Chuyển khoản trực tiếp (Cho những bạn muốn gửi quà cho bạn bè, người thân)</div>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="box-item-slogan">
-                            <div class="box-item-sl-img">
-                                <div style="background-image: url('<?php echo wp_upload_dir(null,true,false )["url"]."/logo-4.png"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
-                            </div>
-                            <div class="box-item-sl-info">
-                                <h3 class="box-item-sl-title">HẬU MÃI HÀNG ĐẦU</h3>
-                                <div class="box-item-sl-excerpt">Chế độ bảo hành lên đến 2 năm cho tất cả đồng hồ chính hãng mua tại Đồng Hồ GOWATCH. Ngoài ra cung cấp gói bảo hành TRỌN ĐỜI => Chế độ bảo hành lâu năm nhất hiện nay tại Việt Nam</div>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-item-slogan">
-                            <div class="box-item-sl-img">
-                                <div style="background-image: url('<?php echo wp_upload_dir(null,true,false )["url"]."/logo-4.png"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
-                            </div>
-                            <div class="box-item-sl-info">
-                                <h3 class="box-item-sl-title">THAY PIN MIỄN PHÍ</h3>
-                                <div class="box-item-sl-excerpt">Thay pin miễn phí suốt đời cho tất cả các đồng hồ được Đồng Hồ GOWATCH phân phối!</div>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-item-slogan">
-                            <div class="box-item-sl-img">
-                                <div style="background-image: url('<?php echo wp_upload_dir(null,true,false )["url"]."/logo-4.png"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
-                            </div>
-                            <div class="box-item-sl-info">
-                                <h3 class="box-item-sl-title">1 ĐỔI 1</h3>
-                                <div class="box-item-sl-excerpt">Chế độ 1 đổi 1 trong tuần đầu tiên nếu có bất kỳ lỗi gì do nhà sản xuất</div>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php
+    include get_template_directory()."/block/block-hon-mot-trieu-nguoi-tin-dung.php";
+    ?>
     <div class="box-san-pham-ban-chay">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="spbc-title">Sản phẩm bán chạy</h2>
+                    <h2 class="khuyen-mai-theo-ngay">Sản phẩm bán chạy</h2>
                     <div class="owl-carousel-spbc owl-carousel owl-theme owl-loaded">
                         <?php
                         $j=0;
@@ -279,7 +192,7 @@
             </div>
             <div class="row margin-top-30">
                 <div class="col">
-                    <h2 class="spbc-title">Tin tức</h2>
+                    <h2 class="khuyen-mai-theo-ngay">Tin tức</h2>
                     <div class="box-featured-news">
                         <div class="row">
                             <?php
@@ -313,37 +226,6 @@
                             <div class="col">
                                 <a href="<?php echo site_url( '',null ); ?>">Xem thêm</a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="content-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="ryse-of-rome">
-                        <div class="owl-carousel-customer owl-carousel owl-theme owl-loaded">
-                            <?php
-                            for($i=0;$i<27;$i++) {
-                                ?>
-                                <div class="item">
-                                    <div class="box-customer">
-                                        <div class="box-customer-img">
-                                            <a href="javascript:void(0);">
-                                                <img src="<?php echo wp_upload_dir( null,true,false )["url"]."/customer.jpg"; ?>" alt="">
-                                            </a>
-                                        </div>
-                                        <h4 class="box-customer-title"><?php echo wp_trim_words( "Ca sĩ Nguyên Vũ", 55,"[...]" ); ?></h4>
-                                        <div class="box-customer-excerpt">
-                                            <?php echo wp_trim_words( "Vũ chỉ cần lên website GoWatch.Vn chọn mẫu và để lại số điện thoại là ngay lập tức có nhân viên gọi lại tư vấn rất tận tình.Hy vọng GoWatch sẽ tiến xa hơn nhé. Vũ rất ưng ý với mẫu đồng hồ này.", 55, "[...]" ); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php
-                            }
-                            ?>
                         </div>
                     </div>
                 </div>
