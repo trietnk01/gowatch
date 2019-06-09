@@ -18,7 +18,7 @@ $wp_query->query($args);
 $the_query_category=$wp_query;
 /* end set the_query */
 /* start setup pagination */
-$totalItemsPerPage=9;
+$totalItemsPerPage=4;
 $pageRange=3;
 $currentPage=1;
 if(!empty(@$_POST["filter_page"]))          {
@@ -52,73 +52,92 @@ $pagination=$zController->getPagination("Pagination",$arrPagination);
     <div class="row">
         <div class="col">
             <h2 class="khuyen-mai-theo-ngay"><?php single_cat_title( '', true ); ?></h2>
-            <div class="box-news-list">
-                <?php
-                for ($i=0; $i < 10; $i++) {
-                    if($i%2==0){
-                        ?>
-                        <div class="box-news-item">
-                            <div class="box-news-item-1">
-                                <div class="box-item-news-img">
-                                    <a href="<?php echo site_url( 'chi-tiet-bai-viet', null ); ?>">
-                                        <div style="background-image: url('<?php echo wp_upload_dir( null, true, false )["url"]."/news-1.jpg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (800/558));"></div>
-                                        <div class="panel-top-to-bottom"></div>
-                                        <div class="panel-bottom-to-top"></div>
-                                        <div class="panel-link">
-                                            <div class="panel-circle">
-                                                <i class="fas fa-link"></i>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="box-news-item-2">
-                                <div class="box-news-information">
-                                    <h3 class="box-news-information-title"><a href="javascript:void(0);"><?php echo wp_trim_words( "Những mẫu đồng hồ Michael Kors chính hãng được “tín đồ” sùng bái nhất",55,"[...]" ); ?></a></h3>
-                                    <div class="box-news-information-excerpt"><?php echo wp_trim_words( "Michael Kors là một trong những thương hiệu đồng hồ được yêu thích nhất hiện nay và được giới trẻ săn đón rất nhiều. Mẫu đồng hồ Michael Kors chính hãng luôn nhận được sự chào đón nồng hậu từ", 55, null ); ?></div>
-                                    <div class="box-news-information-date-post">18/08/2018</div>
-                                    <div class="news-readmore2 margin-top-10">
-                                        <a href="javascript:void(0);">Xem thêm</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                        <?php
-                    }else{
-                        ?>
-                        <div class="box-news-item">
-                            <div class="box-news-item-2">
-                                <div class="box-news-information">
-                                    <h3 class="box-news-information-title"><a href="javascript:void(0);"><?php echo wp_trim_words( "Những mẫu đồng hồ Michael Kors chính hãng được “tín đồ” sùng bái nhất",55,"[...]" ); ?></a></h3>
-                                    <div class="box-news-information-excerpt"><?php echo wp_trim_words( "Michael Kors là một trong những thương hiệu đồng hồ được yêu thích nhất hiện nay và được giới trẻ săn đón rất nhiều. Mẫu đồng hồ Michael Kors chính hãng luôn nhận được sự chào đón nồng hậu từ", 55, null ); ?></div>
-                                    <div class="box-news-information-date-post">18/08/2018</div>
-                                    <div class="news-readmore2 margin-top-10">
-                                        <a href="javascript:void(0);">Xem thêm</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-news-item-1">
-                                <div class="box-item-news-img">
-                                    <a href="<?php echo site_url( 'chi-tiet-bai-viet', null ); ?>">
-                                        <div style="background-image: url('<?php echo wp_upload_dir( null, true, false )["url"]."/news-1.jpg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (800/558));"></div>
-                                        <div class="panel-top-to-bottom"></div>
-                                        <div class="panel-bottom-to-top"></div>
-                                        <div class="panel-link">
-                                            <div class="panel-circle">
-                                                <i class="fas fa-link"></i>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                        <?php
-                    }
-                }
+            <?php
+            if($the_query_category->have_posts()){
                 ?>
-            </div>
+                <form class="category-box" method="POST">
+                    <input type="hidden" name="filter_page" value="1" />
+                    <div class="box-news-list">
+                        <?php
+                        $i=0;
+                        while($the_query_category->have_posts()) {
+                            $the_query_category->the_post();
+                            $post_id=$the_query_category->post->ID;
+                            $title=get_the_title($post_id);
+                            $permalink=get_the_permalink($post_id);
+                            $date_post=get_the_date( 'd/m/Y',@$post_id );
+                            $featured_img=get_the_post_thumbnail_url($post_id, 'full');
+                            $excerpt=get_field("single_article_excerpt",@$post_id);
+                            if($i%2==0){
+                                ?>
+                                <div class="box-news-item">
+                                    <div class="box-news-item-1">
+                                        <div class="box-item-news-img">
+                                            <a href="<?php echo @$permalink; ?>">
+                                                <div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (800/558));"></div>
+                                                <div class="panel-top-to-bottom"></div>
+                                                <div class="panel-bottom-to-top"></div>
+                                                <div class="panel-link">
+                                                    <div class="panel-circle">
+                                                        <i class="fas fa-link"></i>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="box-news-item-2">
+                                        <div class="box-news-information">
+                                            <h3 class="box-news-information-title"><a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words( @$title,55,"[...]" ); ?></a></h3>
+                                            <div class="box-news-information-excerpt"><?php echo wp_trim_words( @$excerpt, 55, null ); ?></div>
+                                            <div class="box-news-information-date-post"><?php echo @$date_post; ?></div>
+                                            <div class="news-readmore2 margin-top-10">
+                                                <a href="<?php echo @$permalink; ?>">Xem thêm</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                                <?php
+                            }else{
+                                ?>
+                                <div class="box-news-item">
+                                    <div class="box-news-item-2">
+                                        <div class="box-news-information">
+                                            <h3 class="box-news-information-title"><a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words(@$title,55,"[...]" ); ?></a></h3>
+                                            <div class="box-news-information-excerpt"><?php echo wp_trim_words( @$excerpt, 55, null ); ?></div>
+                                            <div class="box-news-information-date-post"><?php echo @$date_post; ?></div>
+                                            <div class="news-readmore2 margin-top-10">
+                                                <a href="<?php echo @$permalink; ?>">Xem thêm</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-news-item-1">
+                                        <div class="box-item-news-img">
+                                            <a href="<?php echo @$permalink; ?>">
+                                                <div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (800/558));"></div>
+                                                <div class="panel-top-to-bottom"></div>
+                                                <div class="panel-bottom-to-top"></div>
+                                                <div class="panel-link">
+                                                    <div class="panel-circle">
+                                                        <i class="fas fa-link"></i>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                                <?php
+                            }
+                            $i++;
+                        }
+                        ?>
+                    </div>
+                    <div class="category-pagination"><?php echo @$pagination->showPagination();?></div>
+                </form>
+                <?php
+            }
+            ?>
         </div>
     </div>
 </div>

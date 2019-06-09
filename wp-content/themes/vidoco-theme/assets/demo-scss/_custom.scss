@@ -988,36 +988,42 @@ footer{
 }
 .box-category{
 	margin-top:50px;
-	.box-news-list{
-		padding-top: 40px;
-		.box-news-item{
-			.box-news-item-1{
-				width: 50%;
-				float: left
-			}
-			.box-news-item-2{
-				width: 50%;
-				float: left;
-				padding: 30px;
-				.box-news-information{
-					.box-news-information-title{
-						a{
-							font-size: 20px;
-							text-transform: uppercase;
-							font-family: $f_bold;
-							color: $mau;
-							&:hover{
-								color: $mau_1;
+	.category-box{
+		.category-pagination{
+			text-align: center;
+			margin:20px 0;
+		}
+		.box-news-list{
+			padding-top: 40px;
+			.box-news-item{
+				.box-news-item-1{
+					width: 50%;
+					float: left
+				}
+				.box-news-item-2{
+					width: 50%;
+					float: left;
+					padding: 30px;
+					.box-news-information{
+						.box-news-information-title{
+							a{
+								font-size: 20px;
+								text-transform: uppercase;
+								font-family: $f_bold;
+								color: $mau;
+								&:hover{
+									color: $mau_1;
+								}
 							}
 						}
-					}
-					.box-news-information-excerpt{
-						text-align: justify;
-						margin-top: 10px;
-					}
-					.box-news-information-date-post{
-						color: #b5b5b5;
-						margin-top: 10px;
+						.box-news-information-excerpt{
+							text-align: justify;
+							margin-top: 10px;
+						}
+						.box-news-information-date-post{
+							color: #b5b5b5;
+							margin-top: 10px;
+						}
 					}
 				}
 			}
@@ -1054,32 +1060,35 @@ footer{
 		}
 	}
 }
-.box-single{
-	margin-top: 40px;
-	.post-title{
-		font-size: 30px;
-		font-family: $f_bold;
+.single-post-taka{
+	margin-bottom: 20px;
+	.box-single{
+		margin-top: 40px;
+		.post-title{
+			font-size: 30px;
+			font-family: $f_bold;
+		}
+		.post-date-post{
+			margin-top: 10px;
+			text-align: right;
+		}
+		.post-excerpt{
+			margin-top: 10px;
+			font-family: $f_bold;
+			text-align: justify;
+		}
+		.post-content{
+			margin-top: 20px;
+			text-align: justify;
+		}
 	}
-	.post-date-post{
-		margin-top: 10px;
-		text-align: right;
-	}
-	.post-excerpt{
-		margin-top: 10px;
-		font-family: $f_bold;
-		text-align: justify;
-	}
-	.post-content{
-		margin-top: 20px;
-		text-align: justify;
-	}
-}
-.box-news-related{
-	margin-top: 40px;
-	.box-ba-pr{
-		margin-bottom: 40px;
-		&:last-child{
-			margin-bottom: 0;
+	.box-news-related{
+		margin-top: 40px;
+		.box-ba-pr{
+			margin-bottom: 40px;
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
 	}
 }
