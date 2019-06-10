@@ -1161,4 +1161,53 @@ footer{
 }
 .box-category-product{
 	margin-top: 50px;
+	margin-bottom: 50px;
+	.category-product-excerpt{
+		text-align: justify;
+		margin-top: 30px;
+	}
+	.box-product-trade{
+		margin-top: 10px;
+		.box-product-trade-h3{
+			text-transform: uppercase;
+			border-bottom: 1px solid $mau_1;
+			padding-bottom: 10px;
+			font-size: 15px;
+			font-family: $f_bold;
+		}
+		.box-product-trade-lst{
+			list-style: none;
+			padding-left: 0;
+			margin-bottom: 0;
+			li{
+				a{
+					display: block;
+
+					margin:5px 0px;
+					font-size: 12px;
+
+					position: relative;
+					.box-product-trade-label{
+						margin-left:10px;
+						font-family: $f_bold;
+						color: $mau;
+					}
+					.box-product-trade-count{
+						position: absolute;
+						top: 0;
+						right: 0;
+						color:#c3c3c3;
+					}
+					&:before{
+						content: "";
+						width: 9px;
+						height: 9px;
+						border: 1px solid $mau_1;
+						border-radius: 50%;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
 }
