@@ -229,6 +229,23 @@ $content=null;
                     </div>
                 </div>
             </div>
+            <div class="product-info">
+                <div class="tab">
+                    <button class="tablinks h-title" onclick="openCity(event, 'thong-so-ky-thuat')">Thông số kỹ thuật</button>
+                    <button class="tablinks h-title" onclick="openCity(event, 'danh-gia')">Đánh giá</button>
+                    <button class="tablinks h-title" onclick="openCity(event, 'huong-dan-su-dung')">Hướng dẫn sử dụng</button>
+                    <button class="tablinks h-title" onclick="openCity(event, 'chinh-sach-bao-hanh')">Chính sách bảo hành</button>
+                    <button class="tablinks h-title" onclick="openCity(event, 'chinh-sach-giao-hang')">Chính sách giao hàng</button>
+                    <button class="tablinks h-title" onclick="openCity(event, 'phuong-thuc-thanh-toan')">Phương thức thanh toán</button>
+                </div>
+                <div id="thong-so-ky-thuat" class="tabcontent">Thông số kỹ thuật</div>
+                <div id="danh-gia" class="tabcontent">Đánh giá</div>
+                <div id="huong-dan-su-dung" class="tabcontent">Hướng dẫn sử dụng</div>
+                <div id="chinh-sach-bao-hanh" class="tabcontent">Chính sách bảo hành</div>
+                <div id="chinh-sach-giao-hang" class="tabcontent">Chính sách giao hàng</div>
+                <div id="phuong-thuc-thanh-toan" class="tabcontent">Phương thức thanh toán</div>
+            </div>
+
         </div>
     </div>
 </div>
