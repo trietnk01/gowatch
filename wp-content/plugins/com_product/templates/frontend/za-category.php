@@ -12,7 +12,7 @@ $the_query_product=$wp_query;
 
 /* end set the_query */
 /* start setup pagination */
-$totalItemsPerPage=8;
+$totalItemsPerPage=9;
 $pageRange=3;
 $currentPage=1;
 if(!empty(@$_POST["filter_page"]))          {
@@ -30,38 +30,41 @@ $arrPagination=array(
 );
 $pagination=$zController->getPagination("Pagination",$arrPagination);
 /* end setup pagination */
+$page_id_search_product = $zController->getHelper('GetPageId')->get('_wp_page_template','search-product.php');
+$permalink_search_product=get_permalink( $page_id_search_product);
 ?>
-<h1 style="display: none;"><?php echo get_bloginfo( 'name', 'raw' ); ?></h1>
 <div class="box-category-product">
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2 class="khuyen-mai-theo-ngay">Đồng hồ nam</h2>
-                <div class="category-product-excerpt">
-                    <p>Từ lâu, đồng hồ nam là phụ kiện không thể thiếu trong bộ sưu tập thời trang của các quý ông. Một chiếc đồng hồ chính hãng nam kết hợp với các phong cách thời trang hiện đại mang đến sự lịch lãm, sang trọng và đôi khi còn khẳng định địa vị xã hội dành cho phái mạnh. Đặc biệt với những người thành đạt, một chiếc đồng hồ thời trang nam là phụ kiện không thể nào thiếu trong tủ đồ.</p>
-
-<p>Chúng tôi, Gowatch, hân hạnh được phục vụ quý khách hàng những mẫu đồng hồ thời trang nam được xách tay chính hãng từ những thương hiệu hàng đầu trên thế giới. Bằng những dịch vụ hậu mãi tốt nhất, quý khách hàng sẽ yên tâm và hài lòng khi mua đồng hồ nam chính hãng tại Gowatch.</p>
-                </div>
+                <h1 class="khuyen-mai-theo-ngay"><?php single_cat_title( '',true ); ?></h1>
+                <h2 style="display: none;"><?php echo get_bloginfo( 'name', 'raw' ); ?></h2>
+                <?php
+                $term_id=get_queried_object_id();
+                $term = get_term_by( "id", $term_id, 'za_category',OBJECT, 'raw' );
+                if(!empty(@$term->description)){
+                    ?>
+                    <div class="category-product-excerpt">
+                        <?php echo @$term->description; ?>
+                    </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-3">
-                <div class="box-product-trade">
-                    <h3 class="box-product-trade-h3">Thương hiệu</h3>
-                    <ul class="box-product-trade-lst">
-                        <?php
-                        for ($i=0; $i < 10; $i++) {
-                            ?>
-                            <li><a href="javascript:void(0);"><span class="box-product-trade-label">Michael Kors</span><span class="box-product-trade-count">234</span></a></li>
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                </div>
+                <?php include get_template_directory()."/block/block-category-menu-product.php"; ?>
             </div>
-            <div class="col-lg-9"></div>
+        </div>
+        <div class="col-lg-9">
+            <form name="frm_category" method="POST" class="frm-category-za">
+                <input type="hidden" name="filter_page" value="1" />
+                <?php require_once PLUGIN_PATH . DS . "templates" . DS . "frontend". DS . "loop-za-category.php"; ?>
+            </form>
         </div>
     </div>
+</div>
 </div>
 <?php
 get_footer();

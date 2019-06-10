@@ -15,11 +15,11 @@ if($the_query_product->have_posts()){
             $product_price_desc_percent=get_field("zaproduct_price_desc_percent",@$post_id);
             $product_sale_price=get_field("zaproduct_sale_price",@$post_id);
             $product_count_view=get_field("zaproduct_count_view",@$post_id);
-            if($k%4==0){
+            if($k%3==0){
                 echo '<div class="row">';
             }
             ?>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="box-product bx-pr-bottom">
                     <div class="box-sso">
                         <a href="<?php echo site_url( '', null ) ?>" class="a-overlay">
@@ -35,7 +35,7 @@ if($the_query_product->have_posts()){
                             }
                             ?>
                             <div class="box-img">
-                                <div style="background-image: url('<?php echo @$featured_img; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100% / (140/218))"></div>
+                                <div style="background-image: url('<?php echo @$featured_img; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100% / (500/500))"></div>
                             </div>
                             <div class="overlay">
                             </div>
@@ -48,48 +48,29 @@ if($the_query_product->have_posts()){
                         </a>
                     </div>
                     <div class="box-product-info">
-                        <h2 class="box-product-title"><a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words( @$title, 55, null ); ?></a></h2>
-                        <div class="box-product-price">
-                            <div class="box-pr-price-1"><span><?php echo fnPrice(@$product_sale_price); ?></span><span class="margin-left-5">đ</span></div>
-                            <?php
-                            if((float)@$product_price_desc_percent > 0){
-                                ?>
-                                <div class="box-pr-price-2">-<?php echo @$product_price_desc_percent; ?>%</div>
-                                <?php
-                            }
-                            ?>
-                            <div class="clr"></div>
-                        </div>
+                        <h3 class="box-product-title"><a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words( @$title, 55, null ); ?></a></h3>
                         <?php
                         if((float)@$product_sale_price < (float)@$product_price){
                             ?>
-                            <div class="box-product-price-through-margin">
-                                <span class="bx-pr-pr-through"><span><?php echo fnPrice(@$product_price); ?></span><span class="margin-left-5">₫</span></span>
+                            <div class="box-product-price">
+                                <span class="box-pr-price-1"><?php echo fnPrice(@$product_sale_price); ?> đ</span>
+                                <span class="box-pr-price-2"><?php echo fnPrice(@$product_price); ?> đ</span>
+                            </div>
+                            <?php
+                        }else{
+                            ?>
+                            <div class="box-product-price">
+                                <span class="box-pr-price-1"><?php echo fnPrice(@$product_sale_price); ?> đ</span>
                             </div>
                             <?php
                         }
                         ?>
-                        <div class="danh-gia-bang-ngoi-sao">
-                            <div class="ngoi-sao">
-                                <span><i class="far fa-star"></i></span>
-                                <span><i class="far fa-star"></i></span>
-                                <span><i class="far fa-star"></i></span>
-                                <span><i class="far fa-star"></i></span>
-                            </div>
-                            <div class="number-user">
-                                <?php echo fnPrice(@$product_count_view);  ?>
-                            </div>
-                            <div class="box-product-user">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
                     </div>
                 </div>
             </div>
             <?php
             $k++;
-            if($k%4==0 || $k==$the_query_product->post_count){
+            if($k%3==0 || $k==$the_query_product->post_count){
                 echo '</div>';
             }
         }
