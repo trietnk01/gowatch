@@ -78,6 +78,18 @@ function addToCart(product_id,quantity){
 		}
 	});
 }
+function plus(ctrl){
+	var khoi_banh=jQuery(ctrl).closest('.product-detail-quantity-input');
+	var quantity = parseInt(jQuery(khoi_banh).find('input.quantity_cart').val());
+	jQuery(khoi_banh).find('input.quantity_cart').val(quantity + 1);
+}
+function minus(ctrl){
+	var khoi_banh=jQuery(ctrl).closest('.product-detail-quantity-input');
+	var quantity = parseInt(jQuery(khoi_banh).find('input.quantity_cart').val());
+	if(quantity>1){
+		jQuery(khoi_banh).find('input.quantity_cart').val(quantity - 1);
+	}
+}
 jQuery(document).ready(function($) {
 	$(".js-modal-btn").modalVideo();
 	/* begin s */

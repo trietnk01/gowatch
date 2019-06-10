@@ -12,8 +12,9 @@
                                 <?php
                                 foreach (@$terms as $key=>$value) {
                                     $term_permalink=get_term_link( @$value, 'za_category_trade' );
+                                    $cat=get_category(@$value,OBJECT,  'raw' );
                                     ?>
-                                    <li><a href="<?php echo @$term_permalink; ?>"><span class="box-product-trade-label"><?php echo @$value->name; ?></span><span class="box-product-trade-count">234</span></a></li>
+                                    <li><a href="<?php echo @$term_permalink; ?>"><span class="box-product-trade-label"><?php echo @$value->name; ?></span><span class="box-product-trade-count"><?php echo floatval(@$cat->count); ?></span></a></li>
                                     <?php
                                 }
                                 ?>
@@ -35,8 +36,9 @@
                             <?php
                             foreach (@$terms as $key=>$value) {
                                 $term_permalink=get_term_link( @$value, 'za_category_trade' );
+                                $cat=get_category(@$value,OBJECT,  'raw' );
                                 ?>
-                                <li><a href="<?php echo @$term_permalink; ?>"><span class="box-product-trade-label"><?php echo @$value->name; ?></span><span class="box-product-trade-count">234</span></a></li>
+                                <li><a href="<?php echo @$term_permalink; ?>"><span class="box-product-trade-label"><?php echo @$value->name; ?></span><span class="box-product-trade-count"><?php echo floatval(@$cat->count); ?></span></a></li>
                                 <?php
                             }
                             ?>

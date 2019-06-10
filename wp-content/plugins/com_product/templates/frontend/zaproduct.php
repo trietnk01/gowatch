@@ -52,6 +52,9 @@ $content=null;
                 }
                 wp_reset_postdata();
             }
+            if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb( '<div class="breadcrumbs-lazer">','</div>' );
+            }
             ?>
             <div class="row box-rox">
                 <div class="col-md-5">
@@ -61,7 +64,9 @@ $content=null;
                             foreach ($source_thumbnail as $key => $value) {
                                 ?>
                                 <div class="item">
-                                    <div style="background-image: url('<?php echo @$value; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (340/490));"></div>
+                                    <a href="javascript:void(0);">
+                                        <div style="background-image: url('<?php echo @$value; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (500/500));" class="mitom"></div>
+                                    </a>
                                 </div>
                                 <?php
                             }
@@ -75,7 +80,7 @@ $content=null;
                                 ?>
                                 <div class="item">
                                     <div class="thumbnail-item">
-                                        <div style="background-image: url('<?php echo @$value; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (340/490));"></div>
+                                        <div style="background-image: url('<?php echo @$value; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (500/500));" class="thumbnail-nio"></div>
                                     </div>
                                 </div>
                                 <?php
@@ -84,7 +89,145 @@ $content=null;
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7"></div>
+                <div class="col-md-7">
+                    <h1 class="product-detail-title"><?php echo @$title; ?></h1>
+                    <div class="ma-sp-thuong-hieu">
+                        <span class="msp-label">Mã sản phẩm:</span>
+                        <span class="msp-text">98C102</span>
+                        <span class="thuong-hieu-label">Thương hiệu:</span>
+                        <span class="thuong-hieu-text">Bulova</span>
+                    </div>
+                    <div class="video-va-review-sp" >
+                        <div class="video-icon">
+                            <a href="javascript:void(0);">
+                                <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-video.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>
+                            </a>
+                        </div>
+                        <div class="video-label">
+                            Video
+                        </div>
+                        <div class="video-icon2">
+                            <a href="javascript:void();">
+                                <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-review.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>
+                            </a>
+                        </div>
+                        <div class="video-label">
+                            Xem review sản phẩm
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+                    <div class="product-detail-price">
+                        <span class="product-sale-price">7.500.000 ₫</span>
+                        <span class="product-origin-price">10.800.000 ₫</span>
+                    </div>
+                    <form class="product-detail-quantity-input-form" name="frm_mua_ngay">
+                        <div class="product-detail-quantity">
+                            <div class="product-detail-quanity-label">
+                                Số lượng
+                            </div>
+                            <div class="product-detail-quantity-input" >
+                                <div class="btn-nhap-1"><a href="javascript:void(0);" onclick="minus(this);" class="quantity-left-minus"><i class="fas fa-minus"></i></a></div>
+                                <div class="input-nhap"><input name="quantity" value="1"  onkeypress="return isNumberKey(event);" class="quantity_cart" /></div>
+                                <div class="btn-nhap-2"><a href="javascript:void(0);" onclick="plus(this);" class="quantity-right-plus"><i class="fas fa-plus"></i></a></div>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="product-detail-mua-ngay">
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#modal-alert-add-cart" onclick="javascript:addToCart(<?php echo $post_id; ?>,document.getElementsByName('quantity')[0].value);">
+                                Mua ngay
+                            </a>
+                            <a href="javascript:void(0);">Mua hàng trả góp</a>
+                        </div>
+                    </form>
+                    <div class="mua-hang-qua-dien-thoai-text">Mua hàng qua điện thoại</div>
+                    <div class="product-detail-mua-hang-qua-dt">
+                        <div class="icon-mua-hang-qua-dt">
+                            <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/24h-icon.svg" ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>
+                        </div>
+                        <span>0935793939</span>
+                        <span>|</span>
+                        <span>0926262926</span>
+                    </div>
+                    <div class="product-detail-tai-sao-box">
+                        <h2 class="tsnm">Tại sao nên mua đồng hồ tại <?php echo get_bloginfo( 'name','raw' ); ?></h2>
+                        <div class="product-detail-box-slogan">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="box-item-slogan">
+                                        <div class="box-item-sl-img">
+                                            <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-1.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>
+                                        </div>
+                                        <div class="box-item-sl-info">
+                                            <h3 class="box-item-sl-title">Uy tín hàng đầu</h3>
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="box-item-slogan">
+                                        <div class="box-item-sl-img">
+                                            <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-2.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
+                                        </div>
+                                        <div class="box-item-sl-info">
+                                            <h3 class="box-item-sl-title">ĐỔI HÀNG DỄ DÀNG - MIỄN PHÍ</h3>
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="box-item-slogan">
+                                        <div class="box-item-sl-img">
+                                            <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-3.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
+                                        </div>
+                                        <div class="box-item-sl-info">
+                                            <h3 class="box-item-sl-title">THANH TOÁN DỄ DÀNG (COD)</h3>
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="box-item-slogan">
+                                        <div class="box-item-sl-img">
+                                            <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-4.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
+                                        </div>
+                                        <div class="box-item-sl-info">
+                                            <h3 class="box-item-sl-title">HẬU MÃI HÀNG ĐẦU</h3>
+
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="box-item-slogan">
+                                        <div class="box-item-sl-img">
+                                            <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-5.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
+                                        </div>
+                                        <div class="box-item-sl-info">
+                                            <h3 class="box-item-sl-title">THAY PIN MIỄN PHÍ</h3>
+
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="box-item-slogan">
+                                        <div class="box-item-sl-img">
+                                            <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-6.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
+                                        </div>
+                                        <div class="box-item-sl-info">
+                                            <h3 class="box-item-sl-title">1 ĐỔI 1</h3>
+
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
