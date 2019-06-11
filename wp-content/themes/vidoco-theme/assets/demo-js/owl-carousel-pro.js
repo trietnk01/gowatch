@@ -193,4 +193,36 @@ jQuery(document).ready(function(){
             }
         }
     });
+    jQuery(".owl-carousel-product-related").owlCarousel({
+        autoplay:true,
+        loop:true,
+        margin:60,
+        nav:false,
+        navText: ["<i class=\"fas fa-chevron-left\"></i>","<i class=\"fas fa-chevron-right\"></i>"],
+        dots:false,
+        mouseDrag: true,
+        touchDrag: true,
+        lazyLoad: true,
+        responsiveClass:true,
+        responsive:{
+            240:{
+                margin:0,
+                items:1,
+            },
+            414:{
+                margin:30,
+                items:2,
+            },
+            740:{
+                margin:40,
+                items:2,
+            },
+            768:{
+                margin:35,
+            },
+            1024:{
+                items:3
+            }
+        }
+    });
 });

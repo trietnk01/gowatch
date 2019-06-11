@@ -1,7 +1,8 @@
 .tab {
  overflow: hidden;
- border-bottom: 1px solid #aaaaaa;
  background: transparent;
+ position: relative;
+ z-index: 1;
  button {
    float: left;
    border: none;
@@ -10,24 +11,28 @@
    padding:8px 10px;
    transition: 0.3s;
    text-transform: uppercase;
-   font-weight: bold;
+   font-family: $f_bold;
    background: transparent;
-   margin-right: 45px;
-   font-size: 16px;
-   color: #d54d4d;
+   margin-right: 0;
+   font-size: 11px;
    &:hover{
     background: transparent;
   }
   &.active{
-   background-color: transparent;
-   color: #000000;
-   border-bottom: 3px solid #aaaaaa;
+   background-color: #fff;
+   border-left: 1px solid $mau_1;
+   border-right: 1px solid $mau_1;
+   border-top: 1px solid $mau_1;
  }
 }
 }
 .tabcontent {
   display: none;
   padding: 6px 0px;
-  border: 0px solid #ccc;
-  border-top: none;
+  border: 1px solid $mau_1;
+  position: absolute;
+  left: 0;
+  top: 32px;
+  width: 100%;
+  padding:10px;
 }

@@ -33,7 +33,7 @@ $pagination=$zController->getPagination("Pagination",$arrPagination);
 $page_id_search_product = $zController->getHelper('GetPageId')->get('_wp_page_template','search-product.php');
 $permalink_search_product=get_permalink( $page_id_search_product);
 ?>
-<div class="box-category-product">
+<div class="box-category-product margin-top-40">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -56,12 +56,12 @@ $permalink_search_product=get_permalink( $page_id_search_product);
             <div class="col-lg-3">
                 <?php include get_template_directory()."/block/block-category-menu-product.php"; ?>
             </div>
-        </div>
-        <div class="col-lg-9">
-            <form name="frm_category" method="POST" class="frm-category-za">
-                <input type="hidden" name="filter_page" value="1" />
-                <?php require_once PLUGIN_PATH . DS . "templates" . DS . "frontend". DS . "loop-za-category.php"; ?>
-            </form>
+            <div class="col-lg-9">
+                <form name="frm_category" method="POST" class="frm-category-za">
+                    <input type="hidden" name="filter_page" value="1" />
+                    <?php require_once PLUGIN_PATH . DS . "templates" . DS . "frontend". DS . "loop-za-category.php"; ?>
+                </form>
+            </div>
         </div>
     </div>
 </div>
