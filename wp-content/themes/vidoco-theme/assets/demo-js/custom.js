@@ -56,6 +56,12 @@ function showDanhMucSanPhamChiTiet(ctrl){
 		jQuery(ul_submenu).slideUp();
 	}
 }
+function showFrmSearch(){
+	jQuery('.pan_search').show();
+}
+function closeFrmSearch(){
+	jQuery('.pan_search').hide();
+}
 function addToCart(product_id,quantity){
 	var id = product_id;
 	var dataObj = {

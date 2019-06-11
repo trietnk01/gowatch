@@ -4,38 +4,56 @@
 Footer template
 
 */
-?>
-<div class="content-bottom">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="ryse-of-rome">
-          <div class="owl-carousel-customer owl-carousel owl-theme owl-loaded">
-            <?php
-            for($i=0;$i<27;$i++) {
-              ?>
-              <div class="item">
-                <div class="box-customer">
-                  <div class="box-customer-img">
-                    <a href="javascript:void(0);">
-                      <img src="<?php echo wp_upload_dir( null,true,false )["url"]."/customer.jpg"; ?>" alt="">
-                    </a>
-                  </div>
-                  <h4 class="box-customer-title"><?php echo wp_trim_words( "Ca sĩ Nguyên Vũ", 55,"[...]" ); ?></h4>
-                  <div class="box-customer-excerpt">
-                    <?php echo wp_trim_words( "Vũ chỉ cần lên website GoWatch.Vn chọn mẫu và để lại số điện thoại là ngay lập tức có nhân viên gọi lại tư vấn rất tận tình.Hy vọng GoWatch sẽ tiến xa hơn nhé. Vũ rất ưng ý với mẫu đồng hồ này.", 55, "[...]" ); ?>
+$args = array(
+  'post_type' => 'zaykien',
+  'orderby' => 'id',
+  'order'   => 'DESC',
+  'posts_per_page' => -1,
+);
+$the_query_y_kien=new WP_Query(@$args);
+if($the_query_y_kien->have_posts()){
+  ?>
+  <div class="content-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="ryse-of-rome">
+            <div class="owl-carousel-customer owl-carousel owl-theme owl-loaded">
+              <?php
+              while($the_query_y_kien->have_posts()) {
+                $the_query_y_kien->the_post();
+                                    $post_id=$the_query_y_kien->post->ID;
+
+                                    $title=get_the_title(@$post_id);
+                                    $content=apply_filters( "the_content", get_the_content( null,false ));
+                                    $featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
+                ?>
+                <div class="item">
+                  <div class="box-customer">
+                    <div class="box-customer-img">
+                      <a href="javascript:void(0);">
+                        <img src="<?php echo @$featured_img; ?>" alt="">
+                      </a>
+                    </div>
+                    <h4 class="box-customer-title"><?php echo wp_trim_words( @$title, 55,"[...]" ); ?></h4>
+                    <div class="box-customer-excerpt">
+                      <?php echo wp_trim_words($content, 55, "[...]" ); ?>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <?php
-            }
-            ?>
+                <?php
+              }
+              wp_reset_postdata();
+              ?>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <?php
+}
+?>
 <footer>
   <div class="container">
     <div class="row">
@@ -137,11 +155,11 @@ Footer template
             <h3 class="footer-menu-h">Tư vấn</h3>
             <ul class="footer-menu-ul">
               <li><a href="javascript:void(0);">Tư vấn mua hàng (11:00 - 21:00)</a></li>
-              <li><a href="javascript:void(0);">+84 935 793 939</a></li>
+              <li><a href="tel:<?php echo get_field("setting_thong_tin_chung_call_now","option"); ?>"><?php echo get_field("setting_thong_tin_chung_hotline","option"); ?></a></li>
               <li><a href="javascript:void(0);">Góp ý, khiếu nại, bảo hành (11:00 - 21:00)</a></li>
-              <li><a href="javascript:void(0);">+84 926 262 926</a></li>
+              <li><a href="tel:<?php echo get_field("setting_thong_tin_chung_call_now","option"); ?>"><?php echo get_field("setting_thong_tin_chung_hotline","option"); ?></a></li>
               <li><a href="javascript:void(0);">Hợp tác kinh doanh (11:00 - 21:00)</a></li>
-              <li><a href="javascript:void(0);">+84 908 764 264</a></li>
+              <li><a href="tel:<?php echo get_field("setting_thong_tin_chung_call_now","option"); ?>"><?php echo get_field("setting_thong_tin_chung_hotline","option"); ?></a></li>
             </ul>
           </div>
           <div class="clr"></div>
@@ -167,12 +185,26 @@ Footer template
       <div class="col">
         <div class="box-blog-info">&copy;2018 <?php echo get_bloginfo( 'name', 'raw' ); ?> - Hàng Hiệu Nhập Khẩu Go . GPDKKD: 41O8036924 do sở KH & ĐT TP.HCM cấp ngày 21/08/2018.</div>
         <div class="box-copy-right-address">
-          <span class="box-cpr-address-bold">Địa chỉ:</span> <span class="box-cpr-address-txt">Tầng Trệt Lô E.02, Chung cư Mỹ Đức, 220 Xô Viết Nghệ Tĩnh, Phường 21, Quận Bình Thạnh , TP.Hồ Chí Minh.</span> <span class="box-cpr-address-bold">Điện thoại:</span> <span class="box-cpr-link"><a href="tel:0935793939">0935 79 39 39</a></span> . <span class="box-cpr-address-bold">Email:</span> <span class="box-cpr-link"><a href="mailto:contact@gowatch.vn">contact@gowatch.vn</a></span>
+          <span class="box-cpr-address-bold">Địa chỉ:</span> <span class="box-cpr-address-txt"><?php echo get_field("setting_thong_tin_chung_address","option"); ?></span> <span class="box-cpr-address-bold">Điện thoại:</span> <span class="box-cpr-link"><a href="tel:<?php echo get_field("setting_thong_tin_chung_call_now","option"); ?>"><?php echo get_field("setting_thong_tin_chung_hotline","option"); ?></a></span> . <span class="box-cpr-address-bold">Email:</span> <span class="box-cpr-link"><a href="mailto:<?php echo get_field("setting_thong_tin_chung_email","option"); ?>"><?php echo get_field("setting_thong_tin_chung_email","option"); ?></a></span>
         </div>
       </div>
     </div>
   </div>
 </footer>
+<!-- begin pan search -->
+<div class="pan_search">
+  <div class="pan_close">
+   <a href="javascript:void(0);" onclick="closeFrmSearch();"><i class="fa fa-times" aria-hidden="true"></i></a>
+ </div>
+ <form class="frmsearcharticle" name="frm_search_article" method="POST">
+  <div class="vatimkiem"><input value="" name="s" type="search" placeholder="Tìm kiếm" class="txt_search" autocomplete="off"></div>
+  <div class="btnsearch">
+    <a href="javascript:void(0);" onclick="document.forms['frm_search_article'].submit();"><img src="<?php echo get_template_directory_uri()."/assets/images/search-w.svg"; ?>" /></a>
+  </div>
+</form>
+</div>
+<!-- end pan search -->
+<!-- begin modal cart -->
 <div class="modal fade modal-add-cart" id="modal-alert-add-cart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -186,9 +218,12 @@ Footer template
     </div>
   </div>
 </div>
+<!-- end modal cart -->
+<!-- begin scrolltop -->
 <div class="scrollTop">
   <a href="javascript:void(0);"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 </div>
+<!-- end scrolltop -->
 <?php
 wp_footer();
 ?>

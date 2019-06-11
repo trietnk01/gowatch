@@ -48,11 +48,11 @@ $permalink_search_product=get_permalink( $page_id_search_product);
 							<a href="javascript:void(0);">
 								<span><i class="fas fa-shopping-cart"></i></span>
 								<span>Giỏ hàng</span>
-								<span class="cart-number">0</span>
+								<span class="cart-total"><?php echo @$quantity; ?></span>
 							</a>
 						</div>
 						<div class="kinh-lup">
-							<a href="javascript:void(0);"><i class="fas fa-search"></i></a>
+							<a href="javascript:void(0);" onclick="showFrmSearch();"><i class="fas fa-search"></i></a>
 						</div>
 					</div>
 				</div>

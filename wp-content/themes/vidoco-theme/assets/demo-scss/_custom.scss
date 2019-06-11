@@ -25,7 +25,7 @@ header{
 			a{
 				color :#fff;
 				font-family: $f_regular;
-				.cart-number{
+				.cart-total{
 					background-color: #fff;
 					color: $mau;
 					padding: 4px 9px;
@@ -1710,15 +1710,85 @@ footer{
 	}
 	.product-info {
 		position: relative;
+		width: 100%;
 		@media(max-width: 1024px){
 			display: none;
 		}
 		.tskt_tb {
 			border-collapse: collapse;
-			.dong_le {
-				background: #ececec;
-				border-top:1px solid #ddd;
-				border-bottom:1px solid #ddd;
+			width: 100%;
+			padding:5px 5px;
+			td{
+				padding:5px 5px;
+				&.dong_le {
+					background: #f1f1f1;
+					border-top:1px solid #ddd;
+					border-bottom:1px solid #ddd;
+				}
+				.product-detail-tskt-label{
+					font-family: $f_bold;
+				}
+			}
+		}
+		#thong-so-ky-thuat{
+			table{
+				width: 100%;
+				border-collapse: collapse;
+				thead{
+					tr{
+						th{
+							padding:5px;
+						}
+						&:nth-of-type(even){
+							background: #f1f1f1
+						}
+					}
+				}
+				tbody{
+					tr{
+						td{
+							padding:5px;
+							.product-detail-tskt-label{
+								font-family: $f_bold;
+							}
+						}
+						&:nth-of-type(even){
+							background: #f1f1f1
+						}
+					}
+				}
+			}
+		}
+		#phuong-thuc-thanh-toan{
+			table{
+				width: 100%;
+				border-bottom: 1px solid #ddd ;
+				border-right: 1px solid #ddd ;
+				border-collapse: collapse;
+				thead{
+					tr{
+						th{
+							border-top: 1px solid #ddd ;
+							border-left: 1px solid #ddd ;
+							padding:5px;
+						}
+						&:nth-of-type(even){
+							background: #f1f1f1
+						}
+					}
+				}
+				tbody{
+					tr{
+						td{
+							border-top: 1px solid #ddd ;
+							border-left: 1px solid #ddd ;
+							padding:5px;
+						}
+						&:nth-of-type(even){
+							background: #f1f1f1
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1732,7 +1802,7 @@ footer{
 		margin-top: 20px;
 	}
 	.box-product-detail-related{
-		margin-top: 90px;
+		margin-top: 50px;
 		@media(max-width: 1024px){
 			margin-top: 30px;
 		}

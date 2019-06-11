@@ -36,7 +36,7 @@ if(count(@$args_meta_query) > 0){
 $the_query_product=new WP_Query($args);
 /* end set the_query */
 /* start setup pagination */
-$totalItemsPerPage=16;
+$totalItemsPerPage=9;
 $pageRange=3;
 $currentPage=1;
 if(!empty(@$_POST["filter_page"]))          {
@@ -64,35 +64,36 @@ if(have_posts()){
     wp_reset_postdata();
 }
 ?>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="calo-box">
-                <div class="row">
-                    <div class="col">
-                        <?php include get_template_directory()."/block/block-breadcrumb.php"; ?>
+<div class="box-category-product margin-top-40">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="khuyen-mai-theo-ngay"><?php single_cat_title( '',true ); ?></h1>
+                <h2 style="display: none;"><?php echo get_bloginfo( 'name', 'raw' ); ?></h2>
+                <?php
+                $term_id=get_queried_object_id();
+                $term = get_term_by( "id", $term_id, 'za_category',OBJECT, 'raw' );
+                if(!empty(@$term->description)){
+                    ?>
+                    <div class="category-product-excerpt">
+                        <?php echo @$term->description; ?>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="doreco">
-                            <?php include get_template_directory()."/block/block-category-menu-product-left-side.php"; ?>
-                        </div>
-                        <div class="doreco">
-                            <?php include get_template_directory()."/block/block-khoang-gia.php"; ?>
-                        </div>
-                        <div class="margin-top-20">
-                            <?php include get_template_directory()."/block/block-ads.php";  ?>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <form name="frm_category" method="POST" class="frm-category-za">
-                            <input type="hidden" name="filter_page" value="1" />
-                            <h1 class="category-header"><?php echo @$title_tim_kiem; ?></h1>
-                            <?php require_once PLUGIN_PATH . DS . "templates" . DS . "frontend". DS . "loop-za-category.php"; ?>
-                        </form>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <?php include get_template_directory()."/block/block-category-menu-product.php"; ?>
+            </div>
+            <div class="col-lg-9">
+                <form name="frm_category" method="POST" class="frm-category-za">
+                    <input type="hidden" name="filter_page" value="1" />
+                    <input type="hidden" name="price_min" value="<?php echo @$_POST["price_min"]; ?>" />
+                    <input type="hidden" name="price_max" value="<?php echo @$_POST["price_max"]; ?>" />
+                    <?php require_once PLUGIN_PATH . DS . "templates" . DS . "frontend". DS . "loop-za-category.php"; ?>
+                </form>
             </div>
         </div>
     </div>

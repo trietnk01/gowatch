@@ -22,7 +22,7 @@ if($the_query_product->have_posts()){
             <div class="col-md-4">
                 <div class="box-product bx-pr-bottom">
                     <div class="box-sso">
-                        <a href="<?php echo site_url( '', null ) ?>" class="a-overlay">
+                        <a href="javascript:void(0);" class="a-overlay">
                             <?php
                             if((float)@$product_price_desc_percent > 0){
                                 ?>

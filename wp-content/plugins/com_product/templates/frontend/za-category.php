@@ -59,12 +59,13 @@ $permalink_search_product=get_permalink( $page_id_search_product);
             <div class="col-lg-9">
                 <form name="frm_category" method="POST" class="frm-category-za">
                     <input type="hidden" name="filter_page" value="1" />
+                    <input type="hidden" name="price_min" value="<?php echo @$_POST["price_min"]; ?>" />
+                    <input type="hidden" name="price_max" value="<?php echo @$_POST["price_max"]; ?>" />
                     <?php require_once PLUGIN_PATH . DS . "templates" . DS . "frontend". DS . "loop-za-category.php"; ?>
                 </form>
             </div>
         </div>
     </div>
-</div>
 </div>
 <?php
 get_footer();

@@ -2,7 +2,7 @@
  overflow: hidden;
  background: transparent;
  position: relative;
- z-index: 1;
+ z-index: 2;
  button {
    float: left;
    border: none;
@@ -30,9 +30,11 @@
   display: none;
   padding: 6px 0px;
   border: 1px solid $mau_1;
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 32px;
+  top: -1px;
   width: 100%;
   padding:10px;
+  z-index: 1;
+  text-align: justify;
 }

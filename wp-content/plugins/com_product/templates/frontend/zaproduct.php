@@ -97,8 +97,32 @@ $data_product_tskt=array();
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <div class="box-product-detail-schema">
-                            <h1 class="product-detail-title"><?php echo @$title; ?></h1>
+                        <div class="box-product-detail-schema" itemscope itemtype="http://schema.org/NewsArticle">
+                            <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://google.com/article"/>
+                            <h1 class="product-detail-title" itemprop="headline"><?php echo @$title; ?></h1>
+                            <h2 style="display: none;"><?php echo get_bloginfo( 'name', 'raw' ); ?></h2>
+                            <!-- begin schema -->
+                            <p style="display: none;" itemprop="author" itemscope itemtype="https://schema.org/Person"> By <span itemprop="name">DienKim</span>
+                            </p>
+                            <p style="display: none;" itemprop="description"><?php echo @$title; ?></p>
+                            <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="display: none;">
+                                <img src="<?php echo @$featured_img; ?>"/>
+                                <meta itemprop="url" content="<?php echo @$featured_img; ?>">
+                                <meta itemprop="width" content="800">
+                                <meta itemprop="height" content="800">
+                            </div>
+                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;">
+                                <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                    <img src="<?php echo @$featured_img; ?>"/>
+                                    <meta itemprop="url" content="<?php echo @$featured_img; ?>">
+                                    <meta itemprop="width" content="600">
+                                    <meta itemprop="height" content="60">
+                                </div>
+                                <meta itemprop="name" content="Google">
+                            </div>
+                            <meta itemprop="datePublished" content="2015-02-05T08:00:00+08:00" style="display: none;" />
+                            <meta itemprop="dateModified" content="2015-02-05T09:20:00+08:00" style="display: none;" />
+                            <!-- end schema -->
                             <div class="ma-sp-thuong-hieu">
                                 <span class="msp-label">Mã sản phẩm:</span>
                                 <span class="msp-text"><?php echo @$product_sku; ?></span>
@@ -277,27 +301,19 @@ $data_product_tskt=array();
                             <?php
                             if(count(@$data_product_tskt) > 0){
                                 ?>
-                                <table class="tskt_tb" style="width: 100%;">
+                                <table >
                                     <tbody>
                                         <?php
-                                        $k=0;
                                         foreach ($data_product_tskt as $key => $value) {
                                             if(floatval($k)%2==0){
                                                 ?>
                                                 <tr>
-                                                    <td class="dong_chan" style="width: 16.1455%; height: 48px; text-align: center;"><?php echo @$value["zaproduct_tskt_label"]; ?></td>
-                                                    <td class="dong_chan" style="width: 45.8448%; text-align: center; height: 48px;"><?php echo @$value["zaproduct_tskt_chi_so"]; ?></td>
-                                                </tr>
-                                                <?php
-                                            }else{
-                                                ?>
-                                                <tr>
-                                                    <td class="dong_le" style="width: 16.1455%; height: 48px; text-align: center;"><?php echo @$value["zaproduct_tskt_label"]; ?></td>
-                                                    <td class="dong_le" style="width: 45.8448%; text-align: center; height: 48px;"><?php echo @$value["zaproduct_tskt_chi_so"]; ?></td>
+                                                    <td  style="width: 30%"><span class="product-detail-tskt-label"><?php echo @$value["zaproduct_tskt_label"]; ?></span></td>
+                                                    <td class="text-center" style="width: 40%" ><span>-</span></td>
+                                                    <td ><?php echo @$value["zaproduct_tskt_chi_so"]; ?></td>
                                                 </tr>
                                                 <?php
                                             }
-                                            $k++;
                                         }
                                         ?>
                                     </tbody>
@@ -306,44 +322,98 @@ $data_product_tskt=array();
                             }
                             ?>
                         </div>
-                        <div id="danh-gia" class="tabcontent">Đánh giá</div>
-                        <div id="huong-dan-su-dung" class="tabcontent">Hướng dẫn sử dụng</div>
-                        <div id="chinh-sach-bao-hanh" class="tabcontent">Chính sách bảo hành</div>
-                        <div id="chinh-sach-giao-hang" class="tabcontent">Chính sách giao hàng</div>
-                        <div id="phuong-thuc-thanh-toan" class="tabcontent">Phương thức thanh toán</div>
+                        <div id="danh-gia" class="tabcontent">
+                            <div class="fb-comments" data-href="<?php echo @$permalink; ?>" data-width="" data-numposts="5"></div>
+                        </div>
+                        <div id="huong-dan-su-dung" class="tabcontent">
+                            <?php echo get_field("zaproduct_guide","option"); ?>
+                        </div>
+                        <div id="chinh-sach-bao-hanh" class="tabcontent">
+                            <?php echo get_field("zaproduct_chinh_sach_bao_hanh","option"); ?>
+                        </div>
+                        <div id="chinh-sach-giao-hang" class="tabcontent">
+                            <?php echo get_field("zaproduct_chinh_sach_giao_hang","option"); ?>
+                        </div>
+                        <div id="phuong-thuc-thanh-toan" class="tabcontent">
+                            <?php echo get_field("zaproduct_payment_method","option"); ?>
+                        </div>
                     </div>
                     <div class="product-detail-thong-so-ky-thuat">
 
                     </div>
-                    <div class="box-product-detail-related">
-                        <h3 class="khuyen-mai-theo-ngay">Sản phẩm tương tự</h3>
-                        <div class="owl-carousel-product-related owl-carousel owl-theme owl-loaded">
-                            <?php
-                            for($i=1;$i<=27;$i++){
-                                ?>
-                                <div class="item">
-                                    <div class="sale-off-on-day-box-item">
-                                        <div class="sale-off-box-hinh-tron">
-                                            <a href="<?php echo site_url( '',null ); ?>">
-                                                <div style="background-image: url('<?php echo wp_upload_dir( null,true,false )["url"]."/dong-ho-khuyen-mai-1.jpg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (300/300));"></div>
-                                            </a>
-                                            <div class="sale-off-box">
-                                                <div class="sale-off-txt">Sale off</div>
-                                                <div class="sale-off-number">28%</div>
+                    <?php
+                    $args = array(
+                        'post_type' => 'zaproduct',
+                        'orderby' => 'id',
+                        'order'   => 'DESC',
+                        'posts_per_page' => 12,
+                        'post__not_in'=>array($post_id),
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'za_category',
+                                'field'    => 'term_id',
+                                'terms'    => @$source_term_id,
+                            ),
+                        ),
+                    );
+                    $the_query_sp_lien_quan=new WP_Query($args);
+                    if($the_query_sp_lien_quan->have_posts()){
+                        ?>
+                        <div class="box-product-detail-related">
+                            <h3 class="khuyen-mai-theo-ngay">Sản phẩm tương tự</h3>
+                            <div class="owl-carousel-product-related owl-carousel owl-theme owl-loaded">
+                                <?php
+                                while($the_query_sp_lien_quan->have_posts()){
+                                    $the_query_sp_lien_quan->the_post();
+                                    $post_id=$the_query_sp_lien_quan->post->ID;
+                                    $permalink=get_the_permalink(@$post_id);
+                                    $title=get_the_title(@$post_id);
+                                    $excerpt=get_the_excerpt(@$post_id);
+                                    $featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
+                                    $product_price=get_field("zaproduct_price",@$post_id);
+                                    $product_price_desc_percent=get_field("zaproduct_price_desc_percent",@$post_id);
+                                    $product_sale_price=get_field("zaproduct_sale_price",@$post_id);
+                                    $product_count_view=get_field("zaproduct_count_view",@$post_id);
+                                    ?>
+                                    <div class="item">
+                                        <div class="sale-off-on-day-box-item">
+                                            <div class="sale-off-box-hinh-tron">
+                                                <a href="<?php echo @$permalink; ?>">
+                                                    <div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (300/300));"></div>
+                                                </a>
+                                                <?php
+                                                if(floatval(@$product_price_desc_percent) > 0){
+                                                    ?>
+                                                    <div class="sale-off-box">
+                                                        <div class="sale-off-txt">Sale off</div>
+                                                        <div class="sale-off-number"><?php echo floatval(@$product_price_desc_percent) ; ?>%</div>
+                                                    </div>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </div>
+                                            <h3 class="sale-off-on-day-title"><a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words(@$title,55, "[...]" ) ?></a></h3>
+                                            <div class="sale-off-on-day-price">
+                                                <span class="sale-off-on-day-sale-price"><?php echo fnPrice(@$product_sale_price) ; ?> ₫</span>
+                                                <?php
+                                                if(floatval(@$product_price) > floatval(@$product_sale_price)){
+                                                    ?>
+                                                    <span class="sale-off-on-day-sale-original-price"><?php echo fnPrice(@$product_price); ?> ₫</span>
+                                                    <?php
+                                                }
+                                                ?>
                                             </div>
                                         </div>
-                                        <h3 class="sale-off-on-day-title"><a href="<?php echo site_url( '', null ); ?>"><?php echo wp_trim_words( "Đồng Hồ Michael Kors Chính Hãng Nữ MK3821 Camille Pavé Bracelet Rose Gold Watch",55, "[...]" ) ?></a></h3>
-                                        <div class="sale-off-on-day-price">
-                                            <span class="sale-off-on-day-sale-price">4.900.000 ₫</span>
-                                            <span class="sale-off-on-day-sale-original-price">6.800.000 ₫</span>
-                                        </div>
                                     </div>
-                                </div>
-                                <?php
-                            }
-                            ?>
+                                    <?php
+                                }
+                                ?>
+                            </div>
                         </div>
-                    </div>
+                        <?php
+                        wp_reset_postdata();
+                    }
+                    ?>
                 </div>
             </div>
         </div>
