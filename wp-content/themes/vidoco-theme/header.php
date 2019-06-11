@@ -45,7 +45,7 @@ $permalink_search_product=get_permalink( $page_id_search_product);
 							THAY PIN ,ĐÁNH BÓNG ĐỒNG HỒ MIỄN PHÍ TRỌN ĐỜI.NHẬN SHIP COD TOÀN QUỐC.
 						</div>
 						<div class="gio-hang">
-							<a href="javascript:void(0);">
+							<a href="<?php echo @$cart_link; ?>">
 								<span><i class="fas fa-shopping-cart"></i></span>
 								<span>Giỏ hàng</span>
 								<span class="cart-total"><?php echo @$quantity; ?></span>
