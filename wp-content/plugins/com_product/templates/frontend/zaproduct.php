@@ -126,6 +126,9 @@ $data_product_tskt=array();
                             <div class="post-kk-star-rating">
                                 <?php echo do_shortcode( "[ratings]" ); ?>
                             </div>
+                            <div class="post-share-facebook">
+                                <div class="fb-share-button" data-href="<?php echo @$permalink; ?>" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo @$permalink; ?>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
+                            </div>
                             <div class="ma-sp-thuong-hieu">
                                 <span class="msp-label">Mã sản phẩm:</span>
                                 <span class="msp-text"><?php echo @$product_sku; ?></span>

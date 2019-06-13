@@ -81,6 +81,9 @@ $source_term_id=array();
                     <div class="margin-top-10">
                         <div class="fb-comments" data-href="<?php echo @$permalink; ?>" data-width="" data-numposts="5"></div>
                     </div>
+                    <div class="post-share-facebook">
+                        <div class="fb-share-button" data-href="<?php echo @$permalink; ?>" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo @$permalink; ?>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
+                    </div>
                     <?php
                 }
                 ?>

@@ -29,7 +29,7 @@ $source_term_id=array();
                     $title=get_the_title(@$post_id);
                     $permalink=get_the_permalink( @$post_id );
                     $date_post=get_the_date( 'd/m/Y', @$post_id );
-                    $excerpt=get_field("single_article_excerpt",@$post_id);
+                    $excerpt=get_field("single_page_excerpt",@$post_id);
                     $content=apply_filters( "the_content", get_the_content( null,false ) );
                     $featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
                     $source_term = wp_get_object_terms( $post_id,  'category' );
@@ -80,6 +80,9 @@ $source_term_id=array();
                     <div class="post-content"><?php echo @$content; ?></div>
                     <div class="margin-top-10">
                         <div class="fb-comments" data-href="<?php echo @$permalink; ?>" data-width="" data-numposts="5"></div>
+                    </div>
+                    <div class="post-share-facebook">
+                        <div class="fb-share-button" data-href="<?php echo @$permalink; ?>" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo @$permalink; ?>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
                     </div>
                     <?php
                 }
