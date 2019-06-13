@@ -72,6 +72,7 @@ if($the_query_y_kien->have_posts()){
           <div class="ajax-box">
             <div class="ajax_loader_1"></div>
           </div>
+          <div class="note">Cảm ơn đã đặt phòng tại khách sạn của chúng tôi . Chúng tôi sẽ liên hệ lại bạn trong thời gian sớm nhất.</div>
         </form>
       </div>
       <div class="col-xl-8">
