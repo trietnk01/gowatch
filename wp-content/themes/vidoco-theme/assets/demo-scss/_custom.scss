@@ -317,10 +317,20 @@ header{
 				margin-top: 10px;
 				border-bottom: 1px solid $mau_1;
 				padding-bottom: 10px;
+				font-size: 14px;
 				a{
 					font-size: 14px;
 					color: $mau;
 					font-family: $f_bold;
+					display: block;
+				}
+				.post-kk-star-rating{
+					margin-top: 10px;
+					text-align: center;
+					img{
+						width: 12px;
+						display: inline-block;
+					}
 				}
 			}
 			.sale-off-on-day-price{
@@ -337,6 +347,7 @@ header{
 					margin-left: 5px;
 				}
 			}
+
 		}
 	}
 }
@@ -1875,6 +1886,11 @@ footer{
 						font-size: 12px;
 						text-decoration: line-through;
 						margin-left: 5px;
+					}
+				}
+				.post-kk-star-rating{
+					img{
+						width: auto;
 					}
 				}
 			}

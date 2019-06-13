@@ -118,7 +118,12 @@
                                                     }
                                                     ?>
                                                 </div>
-                                                <h3 class="sale-off-on-day-title"><a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words(@$title,55, "[...]" ) ?></a></h3>
+                                                <h3 class="sale-off-on-day-title">
+                                                    <a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words(@$title,55, "[...]" ) ?></a>
+                                                    <div class="post-kk-star-rating">
+                                                        <?php echo do_shortcode( "[ratings]" ); ?>
+                                                    </div>
+                                                </h3>
                                                 <div class="sale-off-on-day-price">
                                                     <span class="sale-off-on-day-sale-price"><?php echo fnPrice(@$product_sale_price) ; ?> ₫</span>
                                                     <?php
