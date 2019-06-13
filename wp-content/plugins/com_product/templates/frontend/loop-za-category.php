@@ -48,7 +48,12 @@ if($the_query_product->have_posts()){
                         </a>
                     </div>
                     <div class="box-product-info">
-                        <h3 class="box-product-title"><a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words( @$title, 55, null ); ?></a></h3>
+                        <h3 class="box-product-title">
+                            <a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words( @$title, 55, null ); ?></a>
+                        </h3>
+                        <div class="post-kk-star-rating">
+                            <?php echo do_shortcode( "[ratings]" ); ?>
+                        </div>
                         <?php
                         if((float)@$product_sale_price < (float)@$product_price){
                             ?>
