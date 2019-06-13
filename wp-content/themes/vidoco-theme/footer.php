@@ -32,7 +32,7 @@ if($the_query_y_kien->have_posts()){
                   <div class="box-customer">
                     <div class="box-customer-img">
                       <a href="javascript:void(0);">
-                        <img src="<?php echo @$featured_img; ?>" alt="">
+                        <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
                       </a>
                     </div>
                     <h4 class="box-customer-title"><?php echo wp_trim_words( @$title, 55,"[...]" ); ?></h4>

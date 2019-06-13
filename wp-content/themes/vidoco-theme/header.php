@@ -88,7 +88,7 @@ $permalink_search_product=get_permalink( $page_id_search_product);
 						</div>
 						<div class="logo">
 							<a href="<?php echo site_url( '', null ); ?>">
-								<div style="background-image: url('<?php echo get_field("setting_thong_tin_chung_favicon","option"); ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (60/60));"></div>
+								<img src="<?php echo get_field("setting_thong_tin_chung_favicon","option"); ?>" width="60">
 							</a>
 						</div>
 					</div>

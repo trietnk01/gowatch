@@ -35,7 +35,7 @@ if($the_query_product->have_posts()){
                             }
                             ?>
                             <div class="box-img">
-                                <div style="background-image: url('<?php echo @$featured_img; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100% / (500/500))"></div>
+                                <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
                             </div>
                             <div class="overlay">
                             </div>

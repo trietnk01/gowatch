@@ -51,14 +51,14 @@ $source_term_id=array();
                 </p>
                 <p style="display: none;" itemprop="description"><?php echo @$title; ?></p>
                 <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="display: none;">
-                    <img src="<?php echo @$featured_img; ?>"/>
+                    <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
                     <meta itemprop="url" content="<?php echo @$featured_img; ?>">
                     <meta itemprop="width" content="800">
                     <meta itemprop="height" content="800">
                 </div>
                 <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;">
                     <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                        <img src="<?php echo @$featured_img; ?>"/>
+                        <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
                         <meta itemprop="url" content="<?php echo @$featured_img; ?>">
                         <meta itemprop="width" content="600">
                         <meta itemprop="height" content="60">
@@ -111,7 +111,7 @@ $source_term_id=array();
                         <div class="box-item-news box-ba-pr">
                             <div class="box-item-news-img">
                                 <a href="<?php echo @$permalink; ?>">
-                                    <div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (800/558));"></div>
+                                    <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
                                     <div class="panel-top-to-bottom"></div>
                                     <div class="panel-bottom-to-top"></div>
                                     <div class="panel-link">

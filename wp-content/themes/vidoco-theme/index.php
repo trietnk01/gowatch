@@ -15,7 +15,7 @@
                     foreach ($data_banner as $key => $value) {
                         ?>
                         <div class="item">
-                            <div style="background-image:url('<?php echo @$value["hp_banner_item"]; ?>');background-repeat: no-repeat;background-size: cover;padding-top:calc(100% / (1519/427));"></div>
+                            <img src="<?php echo @$value["hp_banner_item"]; ?>" alt="<?php echo get_bloginfo( 'name', 'raw' ); ?>">
                         </div>
                         <?php
                     }
@@ -51,7 +51,7 @@
                                     <div class="brand-item">
                                         <a href="javascript:void(0);">
                                             <figure>
-                                                <div style="background-image: url('<?php echo $featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (200/130));"></div>
+                                                <img src="<?php echo $featured_img; ?>" alt="<?php echo get_bloginfo( 'name', 'raw' ); ?>" style="width:150px;">
                                             </figure>
                                         </a>
                                     </div>
@@ -105,7 +105,7 @@
                                             <div class="sale-off-on-day-box-item">
                                                 <div class="sale-off-box-hinh-tron">
                                                     <a href="<?php echo @$permalink; ?>">
-                                                        <div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (300/300));"></div>
+                                                        <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>" style="width:150px;">
                                                     </a>
                                                     <?php
                                                     if(floatval(@$product_price_desc_percent) > 0){
@@ -153,7 +153,7 @@
                                 ?>
                                 <div class="box-ads-item">
                                     <a href="javascript:void(0);">
-                                        <div style="background-image: url('<?php echo @$value["hp_banner_v2_item"]; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (630/290));"></div>
+                                        <img src="<?php echo @$value["hp_banner_v2_item"]; ?>" alt="<?php echo get_bloginfo( 'name', 'raw' ); ?>">
                                         <div class="panel-top-to-bottom"></div>
                                         <div class="panel-bottom-to-top"></div>
                                         <div class="panel-link">
@@ -228,7 +228,7 @@
                                             <div class="sale-off-on-day-box-item">
                                                 <div class="sale-off-box-hinh-tron">
                                                     <a href="<?php echo @$permalink; ?>">
-                                                        <div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (300/300));"></div>
+                                                        <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
                                                     </a>
                                                     <?php
                                                     if(floatval(@$product_price_desc_percent) > 0){
@@ -311,7 +311,7 @@
                                         <div class="box-item-news">
                                             <div class="box-item-news-img">
                                                 <a href="<?php echo @$permalink; ?>">
-                                                    <div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (800/558));"></div>
+                                                    <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$permalink; ?>">
                                                     <div class="panel-top-to-bottom"></div>
                                                     <div class="panel-bottom-to-top"></div>
                                                     <div class="panel-link">

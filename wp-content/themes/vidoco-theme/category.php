@@ -74,7 +74,7 @@ $pagination=$zController->getPagination("Pagination",$arrPagination);
                                     <div class="box-news-item-1">
                                         <div class="box-item-news-img">
                                             <a href="<?php echo @$permalink; ?>">
-                                                <div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (800/558));"></div>
+                                                <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
                                                 <div class="panel-top-to-bottom"></div>
                                                 <div class="panel-bottom-to-top"></div>
                                                 <div class="panel-link">
@@ -114,7 +114,7 @@ $pagination=$zController->getPagination("Pagination",$arrPagination);
                                     <div class="box-news-item-1">
                                         <div class="box-item-news-img">
                                             <a href="<?php echo @$permalink; ?>">
-                                                <div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (800/558));"></div>
+                                                <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
                                                 <div class="panel-top-to-bottom"></div>
                                                 <div class="panel-bottom-to-top"></div>
                                                 <div class="panel-link">

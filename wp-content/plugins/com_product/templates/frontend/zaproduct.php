@@ -72,7 +72,7 @@ $data_product_tskt=array();
                                     ?>
                                     <div class="item">
                                         <a href="javascript:void(0);">
-                                            <div style="background-image: url('<?php echo @$value; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (500/500));" class="mitom"></div>
+                                            <img src="<?php echo @$value; ?>" alt="<?php echo @$title; ?>" class="mitom">
                                         </a>
                                     </div>
                                     <?php
@@ -87,7 +87,7 @@ $data_product_tskt=array();
                                     ?>
                                     <div class="item">
                                         <div class="thumbnail-item">
-                                            <div style="background-image: url('<?php echo @$value; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (500/500));" class="thumbnail-nio"></div>
+                                            <img src="<?php echo @$value; ?>" alt="<?php echo @$title; ?>" class="thumbnail-nio">
                                         </div>
                                     </div>
                                     <?php
@@ -106,14 +106,14 @@ $data_product_tskt=array();
                             </p>
                             <p style="display: none;" itemprop="description"><?php echo @$title; ?></p>
                             <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="display: none;">
-                                <img src="<?php echo @$featured_img; ?>"/>
+                                <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>"/>
                                 <meta itemprop="url" content="<?php echo @$featured_img; ?>">
                                 <meta itemprop="width" content="800">
                                 <meta itemprop="height" content="800">
                             </div>
                             <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;">
                                 <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                                    <img src="<?php echo @$featured_img; ?>"/>
+                                    <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>"/>
                                     <meta itemprop="url" content="<?php echo @$featured_img; ?>">
                                     <meta itemprop="width" content="600">
                                     <meta itemprop="height" content="60">
@@ -141,14 +141,14 @@ $data_product_tskt=array();
                                     <?php
                                     if(!empty(@$product_video_id)){
                                       ?>
-                                      <a href="javascript:void(0);" class="js-modal-btn" data-video-id="qP1U2DYk-PI">
-                                        <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-video.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>
+                                      <a href="javascript:void(0);" class="js-modal-btn" data-video-id="<?php echo @$product_video_id; ?>">
+                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-video.svg"; ?>" style="width: 100%;" alt="<?php echo @$title; ?>">
                                     </a>
                                     <?php
                                 }else{
                                     ?>
                                     <a href="javascript:void(0);">
-                                        <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-video.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>
+                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-video.svg"; ?>" style="width: 100%;" alt="<?php echo @$title; ?>">
                                     </a>
                                     <?php
                                 }
@@ -159,7 +159,7 @@ $data_product_tskt=array();
                             </div>
                             <div class="video-icon2">
                                 <a href="javascript:void();">
-                                    <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-review.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>
+                                    <img src="<?php echo get_template_directory_uri()."/assets/images/icon-review.svg"; ?>" style="width: 100%;" alt="<?php echo @$title; ?>">
                                 </a>
                             </div>
                             <div class="video-label">
@@ -200,7 +200,7 @@ $data_product_tskt=array();
                         <div class="mua-hang-qua-dien-thoai-text">Mua hàng qua điện thoại</div>
                         <div class="product-detail-mua-hang-qua-dt">
                             <div class="icon-mua-hang-qua-dt">
-                                <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/24h-icon.svg" ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>
+                                <img src="<?php echo get_template_directory_uri()."/assets/images/24h-icon.svg" ?>" alt="<?php echo @$title; ?>">
                             </div>
                             <span class="product-detail-hotline"><a href="tel:<?php echo get_field("setting_thong_tin_chung_call_now","option"); ?>"><?php echo get_field("setting_thong_tin_chung_hotline","option"); ?></a></span>
                                 <!--<span>|</span>
@@ -213,7 +213,7 @@ $data_product_tskt=array();
                                             <div class="col-sm-4">
                                                 <div class="box-item-slogan">
                                                     <div class="box-item-sl-img">
-                                                        <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-1.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>
+                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-1.svg"; ?>" alt="<?php echo @$title; ?>">
                                                     </div>
                                                     <div class="box-item-sl-info">
                                                         <h3 class="box-item-sl-title">Uy tín hàng đầu</h3>
@@ -224,7 +224,7 @@ $data_product_tskt=array();
                                             <div class="col-sm-4">
                                                 <div class="box-item-slogan">
                                                     <div class="box-item-sl-img">
-                                                        <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-2.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
+                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-2.svg"; ?>" alt="<?php echo @$title; ?>">
                                                     </div>
                                                     <div class="box-item-sl-info">
                                                         <h3 class="box-item-sl-title">ĐỔI HÀNG DỄ DÀNG - MIỄN PHÍ</h3>
@@ -235,7 +235,7 @@ $data_product_tskt=array();
                                             <div class="col-sm-4">
                                                 <div class="box-item-slogan">
                                                     <div class="box-item-sl-img">
-                                                        <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-3.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
+                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-3.svg"; ?>" alt="<?php echo @$title; ?>">
                                                     </div>
                                                     <div class="box-item-sl-info">
                                                         <h3 class="box-item-sl-title">THANH TOÁN DỄ DÀNG (COD)</h3>
@@ -248,7 +248,7 @@ $data_product_tskt=array();
                                             <div class="col-sm-4">
                                                 <div class="box-item-slogan">
                                                     <div class="box-item-sl-img">
-                                                        <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-4.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
+                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-4.svg"; ?>" alt="<?php echo @$title; ?>">
                                                     </div>
                                                     <div class="box-item-sl-info">
                                                         <h3 class="box-item-sl-title">HẬU MÃI HÀNG ĐẦU</h3>
@@ -260,7 +260,7 @@ $data_product_tskt=array();
                                             <div class="col-sm-4">
                                                 <div class="box-item-slogan">
                                                     <div class="box-item-sl-img">
-                                                        <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-5.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
+                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-5.svg"; ?>" alt="<?php echo @$title; ?>">
                                                     </div>
                                                     <div class="box-item-sl-info">
                                                         <h3 class="box-item-sl-title">THAY PIN MIỄN PHÍ</h3>
@@ -272,7 +272,7 @@ $data_product_tskt=array();
                                             <div class="col-sm-4">
                                                 <div class="box-item-slogan">
                                                     <div class="box-item-sl-img">
-                                                        <div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/icon-6.svg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (95/95));"></div>
+                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-6.svg"; ?>" alt="<?php echo @$title; ?>">
                                                     </div>
                                                     <div class="box-item-sl-info">
                                                         <h3 class="box-item-sl-title">1 ĐỔI 1</h3>
@@ -379,7 +379,7 @@ $data_product_tskt=array();
                                         <div class="sale-off-on-day-box-item">
                                             <div class="sale-off-box-hinh-tron">
                                                 <a href="<?php echo @$permalink; ?>">
-                                                    <div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (300/300));"></div>
+                                                    <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
                                                 </a>
                                                 <?php
                                                 if(floatval(@$product_price_desc_percent) > 0){
