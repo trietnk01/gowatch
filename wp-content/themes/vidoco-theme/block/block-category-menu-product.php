@@ -24,7 +24,7 @@
         ?>
     </div>
     <div class="box-product-trade">
-        <h3 class="box-product-trade-h3">Giới tính</h3>
+        <h3 class="box-product-trade-h3">Loại sản phẩm</h3>
         <?php
         $terms = get_terms( array(
             'taxonomy' => 'za_category',
