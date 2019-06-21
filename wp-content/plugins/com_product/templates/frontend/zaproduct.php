@@ -345,7 +345,29 @@ $data_product_tskt=array();
                         </div>
                     </div>
                     <div class="product-detail-thong-so-ky-thuat">
-
+                        <?php
+                        if(count(@$data_product_tskt) > 0){
+                            ?>
+                            <table >
+                                <tbody>
+                                    <?php
+                                    foreach ($data_product_tskt as $key => $value) {
+                                        if(floatval($k)%2==0){
+                                            ?>
+                                            <tr>
+                                                <td  style="width: 30%"><span class="product-detail-tskt-label"><?php echo @$value["zaproduct_tskt_label"]; ?></span></td>
+                                                <td class="text-center" style="width: 40%" ><span>-</span></td>
+                                                <td ><?php echo @$value["zaproduct_tskt_chi_so"]; ?></td>
+                                            </tr>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                            <?php
+                        }
+                        ?>
                     </div>
                     <?php
                     $args = array(
