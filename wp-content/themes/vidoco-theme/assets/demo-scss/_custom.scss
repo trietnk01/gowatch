@@ -276,7 +276,13 @@ header{
 				position:relative;
 				@media(max-width: 375px){
 					border-radius: 172px;
-					padding: 60px;
+					padding: 100px;
+				}
+				@media(max-width: 320px){
+					padding: 70px;
+				}
+				@media(max-width: 240px){
+					padding: 50px;
 				}
 				.sale-off-box{
 					position: absolute;
@@ -491,7 +497,7 @@ header{
 				}
 				@media(max-width: 375px){
 					border-radius: 172px;
-					padding: 60px;
+					padding: 100px;
 				}
 				.sale-off-box{
 					position: absolute;
@@ -1855,7 +1861,13 @@ footer{
 					position:relative;
 					@media(max-width: 375px){
 						border-radius: 172px;
+						padding: 70px;
+					}
+					@media(max-width: 320px){
 						padding: 60px;
+					}
+					@media(max-width: 240px){
+						padding: 35px;
 					}
 					.sale-off-box{
 						position: absolute;

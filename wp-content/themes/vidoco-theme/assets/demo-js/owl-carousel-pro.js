@@ -74,7 +74,7 @@ jQuery(document).ready(function(){
                 items:1,
             },
             414:{
-                margin:30,
+                margin:20,
                 items:2,
             },
             740:{

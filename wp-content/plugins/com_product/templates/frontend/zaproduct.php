@@ -344,8 +344,10 @@ $data_product_tskt=array();
                             <?php echo get_field("zaproduct_payment_method","option"); ?>
                         </div>
                     </div>
-                    <div class="product-detail-thong-so-ky-thuat">
-                        <?php
+                    <div class="product-detail-thong-so-ky-thuat margin-top-30">
+                        <h3 class="khuyen-mai-theo-ngay">Thông số kỹ thuật</h3>
+                        <div class="margin-top-20">
+                            <?php
                         if(count(@$data_product_tskt) > 0){
                             ?>
                             <table >
@@ -368,6 +370,7 @@ $data_product_tskt=array();
                             <?php
                         }
                         ?>
+                        </div>
                     </div>
                     <?php
                     $args = array(
