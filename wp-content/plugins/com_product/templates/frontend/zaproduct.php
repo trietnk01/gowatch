@@ -209,251 +209,249 @@ $data_product_tskt=array();
                                 <img src="<?php echo get_template_directory_uri()."/assets/images/24h-icon.svg" ?>" alt="<?php echo @$title; ?>">
                             </div>
                             <span class="product-detail-hotline"><a href="tel:<?php echo get_field("setting_thong_tin_chung_call_now","option"); ?>"><?php echo get_field("setting_thong_tin_chung_hotline","option"); ?></a></span>
-                                <!--<span>|</span>
-                                    <span class="product-detail-hotline">0926262926</span>-->
-                                </div>
-                                <div class="product-detail-tai-sao-box">
-                                    <h2 class="tsnm">Tại sao nên mua đồng hồ tại <?php echo get_bloginfo( 'name','raw' ); ?></h2>
-                                    <div class="product-detail-box-slogan">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="box-item-slogan">
-                                                    <div class="box-item-sl-img">
-                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-1.svg"; ?>" alt="<?php echo @$title; ?>">
-                                                    </div>
-                                                    <div class="box-item-sl-info">
-                                                        <h3 class="box-item-sl-title">Uy tín hàng đầu</h3>
-                                                    </div>
-                                                    <div class="clr"></div>
-                                                </div>
+                        </div>
+                        <div class="product-detail-tai-sao-box">
+                            <h2 class="tsnm">Tại sao nên mua đồng hồ tại <?php echo get_bloginfo( 'name','raw' ); ?></h2>
+                            <div class="product-detail-box-slogan">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="box-item-slogan">
+                                            <div class="box-item-sl-img">
+                                                <img src="<?php echo get_template_directory_uri()."/assets/images/icon-1.svg"; ?>" alt="<?php echo @$title; ?>">
                                             </div>
-                                            <div class="col-sm-4">
-                                                <div class="box-item-slogan">
-                                                    <div class="box-item-sl-img">
-                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-2.svg"; ?>" alt="<?php echo @$title; ?>">
-                                                    </div>
-                                                    <div class="box-item-sl-info">
-                                                        <h3 class="box-item-sl-title">ĐỔI HÀNG DỄ DÀNG - MIỄN PHÍ</h3>
-                                                    </div>
-                                                    <div class="clr"></div>
-                                                </div>
+                                            <div class="box-item-sl-info">
+                                                <h3 class="box-item-sl-title">Uy tín hàng đầu</h3>
                                             </div>
-                                            <div class="col-sm-4">
-                                                <div class="box-item-slogan">
-                                                    <div class="box-item-sl-img">
-                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-3.svg"; ?>" alt="<?php echo @$title; ?>">
-                                                    </div>
-                                                    <div class="box-item-sl-info">
-                                                        <h3 class="box-item-sl-title">THANH TOÁN DỄ DÀNG (COD)</h3>
-                                                    </div>
-                                                    <div class="clr"></div>
-                                                </div>
-                                            </div>
+                                            <div class="clr"></div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="box-item-slogan">
-                                                    <div class="box-item-sl-img">
-                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-4.svg"; ?>" alt="<?php echo @$title; ?>">
-                                                    </div>
-                                                    <div class="box-item-sl-info">
-                                                        <h3 class="box-item-sl-title">HẬU MÃI HÀNG ĐẦU</h3>
-
-                                                    </div>
-                                                    <div class="clr"></div>
-                                                </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="box-item-slogan">
+                                            <div class="box-item-sl-img">
+                                                <img src="<?php echo get_template_directory_uri()."/assets/images/icon-2.svg"; ?>" alt="<?php echo @$title; ?>">
                                             </div>
-                                            <div class="col-sm-4">
-                                                <div class="box-item-slogan">
-                                                    <div class="box-item-sl-img">
-                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-5.svg"; ?>" alt="<?php echo @$title; ?>">
-                                                    </div>
-                                                    <div class="box-item-sl-info">
-                                                        <h3 class="box-item-sl-title">THAY PIN MIỄN PHÍ</h3>
-
-                                                    </div>
-                                                    <div class="clr"></div>
-                                                </div>
+                                            <div class="box-item-sl-info">
+                                                <h3 class="box-item-sl-title">ĐỔI HÀNG DỄ DÀNG - MIỄN PHÍ</h3>
                                             </div>
-                                            <div class="col-sm-4">
-                                                <div class="box-item-slogan">
-                                                    <div class="box-item-sl-img">
-                                                        <img src="<?php echo get_template_directory_uri()."/assets/images/icon-6.svg"; ?>" alt="<?php echo @$title; ?>">
-                                                    </div>
-                                                    <div class="box-item-sl-info">
-                                                        <h3 class="box-item-sl-title">1 ĐỔI 1</h3>
-
-                                                    </div>
-                                                    <div class="clr"></div>
-                                                </div>
+                                            <div class="clr"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="box-item-slogan">
+                                            <div class="box-item-sl-img">
+                                                <img src="<?php echo get_template_directory_uri()."/assets/images/icon-3.svg"; ?>" alt="<?php echo @$title; ?>">
                                             </div>
+                                            <div class="box-item-sl-info">
+                                                <h3 class="box-item-sl-title">THANH TOÁN DỄ DÀNG (COD)</h3>
+                                            </div>
+                                            <div class="clr"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="box-item-slogan">
+                                            <div class="box-item-sl-img">
+                                                <img src="<?php echo get_template_directory_uri()."/assets/images/icon-4.svg"; ?>" alt="<?php echo @$title; ?>">
+                                            </div>
+                                            <div class="box-item-sl-info">
+                                                <h3 class="box-item-sl-title">HẬU MÃI HÀNG ĐẦU</h3>
+
+                                            </div>
+                                            <div class="clr"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="box-item-slogan">
+                                            <div class="box-item-sl-img">
+                                                <img src="<?php echo get_template_directory_uri()."/assets/images/icon-5.svg"; ?>" alt="<?php echo @$title; ?>">
+                                            </div>
+                                            <div class="box-item-sl-info">
+                                                <h3 class="box-item-sl-title">THAY PIN MIỄN PHÍ</h3>
+
+                                            </div>
+                                            <div class="clr"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="box-item-slogan">
+                                            <div class="box-item-sl-img">
+                                                <img src="<?php echo get_template_directory_uri()."/assets/images/icon-6.svg"; ?>" alt="<?php echo @$title; ?>">
+                                            </div>
+                                            <div class="box-item-sl-info">
+                                                <h3 class="box-item-sl-title">1 ĐỔI 1</h3>
+
+                                            </div>
+                                            <div class="clr"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <div class="tab">
-                            <button class="tablinks h-title" onclick="openCity(event, 'thong-so-ky-thuat')">Thông số kỹ thuật</button>
-                            <button class="tablinks h-title" onclick="openCity(event, 'danh-gia')">Đánh giá</button>
-                            <button class="tablinks h-title" onclick="openCity(event, 'huong-dan-su-dung')">Hướng dẫn sử dụng</button>
-                            <button class="tablinks h-title" onclick="openCity(event, 'chinh-sach-bao-hanh')">Chính sách bảo hành</button>
-                            <button class="tablinks h-title" onclick="openCity(event, 'chinh-sach-giao-hang')">Chính sách giao hàng</button>
-                            <button class="tablinks h-title" onclick="openCity(event, 'phuong-thuc-thanh-toan')">Phương thức thanh toán</button>
-                            <div class="clr"></div>
-                        </div>
-                        <div id="thong-so-ky-thuat" class="tabcontent">
-                            <?php
-                            if(count(@$data_product_tskt) > 0){
-                                ?>
-                                <table >
-                                    <tbody>
-                                        <?php
-                                        foreach ($data_product_tskt as $key => $value) {
-                                            if(floatval($k)%2==0){
-                                                ?>
-                                                <tr>
-                                                    <td  style="width: 30%"><span class="product-detail-tskt-label"><?php echo @$value["zaproduct_tskt_label"]; ?></span></td>
-                                                    <td class="text-center" style="width: 40%" ><span>-</span></td>
-                                                    <td ><?php echo @$value["zaproduct_tskt_chi_so"]; ?></td>
-                                                </tr>
-                                                <?php
-                                            }
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
-                                <?php
-                            }
-                            ?>
-                        </div>
-                        <div id="danh-gia" class="tabcontent">
-                            <div class="fb-comments" data-href="<?php echo @$permalink; ?>" data-width="" data-numposts="5"></div>
-                        </div>
-                        <div id="huong-dan-su-dung" class="tabcontent">
-                            <?php echo get_field("zaproduct_guide","option"); ?>
-                        </div>
-                        <div id="chinh-sach-bao-hanh" class="tabcontent">
-                            <?php echo get_field("zaproduct_chinh_sach_bao_hanh","option"); ?>
-                        </div>
-                        <div id="chinh-sach-giao-hang" class="tabcontent">
-                            <?php echo get_field("zaproduct_chinh_sach_giao_hang","option"); ?>
-                        </div>
-                        <div id="phuong-thuc-thanh-toan" class="tabcontent">
-                            <?php echo get_field("zaproduct_payment_method","option"); ?>
-                        </div>
-                    </div>
-                    <div class="product-detail-thong-so-ky-thuat margin-top-30">
-                        <h3 class="khuyen-mai-theo-ngay">Thông số kỹ thuật</h3>
-                        <div class="margin-top-20">
-                            <?php
-                        if(count(@$data_product_tskt) > 0){
-                            ?>
-                            <table >
-                                <tbody>
-                                    <?php
-                                    foreach ($data_product_tskt as $key => $value) {
-                                        if(floatval($k)%2==0){
-                                            ?>
-                                            <tr>
-                                                <td  style="width: 30%"><span class="product-detail-tskt-label"><?php echo @$value["zaproduct_tskt_label"]; ?></span></td>
-                                                <td class="text-center" style="width: 40%" ><span>-</span></td>
-                                                <td ><?php echo @$value["zaproduct_tskt_chi_so"]; ?></td>
-                                            </tr>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
-                            <?php
-                        }
-                        ?>
-                        </div>
-                    </div>
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="tab">
+                    <button class="tablinks h-title" onclick="openCity(event, 'thong-so-ky-thuat')">Thông số kỹ thuật</button>
+                    <button class="tablinks h-title" onclick="openCity(event, 'danh-gia')">Đánh giá</button>
+                    <button class="tablinks h-title" onclick="openCity(event, 'huong-dan-su-dung')">Hướng dẫn sử dụng</button>
+                    <button class="tablinks h-title" onclick="openCity(event, 'chinh-sach-bao-hanh')">Chính sách bảo hành</button>
+                    <button class="tablinks h-title" onclick="openCity(event, 'chinh-sach-giao-hang')">Chính sách giao hàng</button>
+                    <button class="tablinks h-title" onclick="openCity(event, 'phuong-thuc-thanh-toan')">Phương thức thanh toán</button>
+                    <div class="clr"></div>
+                </div>
+                <div id="thong-so-ky-thuat" class="tabcontent">
                     <?php
-                    $args = array(
-                        'post_type' => 'zaproduct',
-                        'orderby' => 'id',
-                        'order'   => 'DESC',
-                        'posts_per_page' => 12,
-                        'post__not_in'=>array($post_id),
-                        'tax_query' => array(
-                            array(
-                                'taxonomy' => 'za_category',
-                                'field'    => 'term_id',
-                                'terms'    => @$source_term_id,
-                            ),
-                        ),
-                    );
-                    $the_query_sp_lien_quan=new WP_Query($args);
-                    if($the_query_sp_lien_quan->have_posts()){
+                    if(count(@$data_product_tskt) > 0){
                         ?>
-                        <div class="box-product-detail-related">
-                            <h3 class="khuyen-mai-theo-ngay">Sản phẩm tương tự</h3>
-                            <div class="owl-carousel-product-related owl-carousel owl-theme owl-loaded">
+                        <table >
+                            <tbody>
                                 <?php
-                                while($the_query_sp_lien_quan->have_posts()){
-                                    $the_query_sp_lien_quan->the_post();
-                                    $post_id=$the_query_sp_lien_quan->post->ID;
-                                    $permalink=get_the_permalink(@$post_id);
-                                    $title=get_the_title(@$post_id);
-                                    $excerpt=get_the_excerpt(@$post_id);
-                                    $featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
-                                    $product_price=get_field("zaproduct_price",@$post_id);
-                                    $product_price_desc_percent=get_field("zaproduct_price_desc_percent",@$post_id);
-                                    $product_sale_price=get_field("zaproduct_sale_price",@$post_id);
-                                    $product_count_view=get_field("zaproduct_count_view",@$post_id);
-                                    ?>
-                                    <div class="item">
-                                        <div class="sale-off-on-day-box-item">
-                                            <div class="sale-off-box-hinh-tron">
-                                                <a href="<?php echo @$permalink; ?>">
-                                                    <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
-                                                </a>
-                                                <?php
-                                                if(floatval(@$product_price_desc_percent) > 0){
-                                                    ?>
-                                                    <div class="sale-off-box">
-                                                        <div class="sale-off-txt">Sale off</div>
-                                                        <div class="sale-off-number"><?php echo floatval(@$product_price_desc_percent) ; ?>%</div>
-                                                    </div>
-                                                    <?php
-                                                }
-                                                ?>
-                                            </div>
-                                            <h3 class="sale-off-on-day-title">
-                                                <a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words(@$title,55, "[...]" ) ?></a>
-                                                <div class="post-kk-star-rating">
-                                                    <?php echo do_shortcode( "[ratings]" ); ?>
-                                                </div>
-                                            </h3>
-                                            <div class="sale-off-on-day-price">
-                                                <span class="sale-off-on-day-sale-price"><?php echo fnPrice(@$product_sale_price) ; ?> ₫</span>
-                                                <?php
-                                                if(floatval(@$product_price) > floatval(@$product_sale_price)){
-                                                    ?>
-                                                    <span class="sale-off-on-day-sale-original-price"><?php echo fnPrice(@$product_price); ?> ₫</span>
-                                                    <?php
-                                                }
-                                                ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <?php
+                                foreach ($data_product_tskt as $key => $value) {
+                                    if(floatval($k)%2==0){
+                                        ?>
+                                        <tr>
+                                            <td  style="width: 30%"><span class="product-detail-tskt-label"><?php echo @$value["zaproduct_tskt_label"]; ?></span></td>
+                                            <td class="text-center" style="width: 40%" ><span>-</span></td>
+                                            <td ><?php echo @$value["zaproduct_tskt_chi_so"]; ?></td>
+                                        </tr>
+                                        <?php
+                                    }
                                 }
                                 ?>
-                            </div>
-                        </div>
+                            </tbody>
+                        </table>
                         <?php
-                        wp_reset_postdata();
+                    }
+                    ?>
+                </div>
+                <div id="danh-gia" class="tabcontent">
+                    <div class="fb-comments" data-href="<?php echo @$permalink; ?>" data-width="" data-numposts="5"></div>
+                </div>
+                <div id="huong-dan-su-dung" class="tabcontent">
+                    <?php echo get_field("zaproduct_guide","option"); ?>
+                </div>
+                <div id="chinh-sach-bao-hanh" class="tabcontent">
+                    <?php echo get_field("zaproduct_chinh_sach_bao_hanh","option"); ?>
+                </div>
+                <div id="chinh-sach-giao-hang" class="tabcontent">
+                    <?php echo get_field("zaproduct_chinh_sach_giao_hang","option"); ?>
+                </div>
+                <div id="phuong-thuc-thanh-toan" class="tabcontent">
+                    <?php echo get_field("zaproduct_payment_method","option"); ?>
+                </div>
+            </div>
+            <div class="product-detail-thong-so-ky-thuat margin-top-30">
+                <h3 class="khuyen-mai-theo-ngay">Thông số kỹ thuật</h3>
+                <div class="margin-top-20">
+                    <?php
+                    if(count(@$data_product_tskt) > 0){
+                        ?>
+                        <table >
+                            <tbody>
+                                <?php
+                                foreach ($data_product_tskt as $key => $value) {
+                                    if(floatval($k)%2==0){
+                                        ?>
+                                        <tr>
+                                            <td  style="width: 30%"><span class="product-detail-tskt-label"><?php echo @$value["zaproduct_tskt_label"]; ?></span></td>
+                                            <td class="text-center" style="width: 40%" ><span>-</span></td>
+                                            <td ><?php echo @$value["zaproduct_tskt_chi_so"]; ?></td>
+                                        </tr>
+                                        <?php
+                                    }
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                        <?php
                     }
                     ?>
                 </div>
             </div>
+            <?php
+            $args = array(
+                'post_type' => 'zaproduct',
+                'orderby' => 'id',
+                'order'   => 'DESC',
+                'posts_per_page' => 12,
+                'post__not_in'=>array($post_id),
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'za_category',
+                        'field'    => 'term_id',
+                        'terms'    => @$source_term_id,
+                    ),
+                ),
+            );
+            $the_query_sp_lien_quan=new WP_Query($args);
+            if($the_query_sp_lien_quan->have_posts()){
+                ?>
+                <div class="box-product-detail-related">
+                    <h3 class="khuyen-mai-theo-ngay">Sản phẩm tương tự</h3>
+                    <div class="owl-carousel-product-related owl-carousel owl-theme owl-loaded">
+                        <?php
+                        while($the_query_sp_lien_quan->have_posts()){
+                            $the_query_sp_lien_quan->the_post();
+                            $post_id=$the_query_sp_lien_quan->post->ID;
+                            $permalink=get_the_permalink(@$post_id);
+                            $title=get_the_title(@$post_id);
+                            $excerpt=get_the_excerpt(@$post_id);
+                            $featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
+                            $product_price=get_field("zaproduct_price",@$post_id);
+                            $product_price_desc_percent=get_field("zaproduct_price_desc_percent",@$post_id);
+                            $product_sale_price=get_field("zaproduct_sale_price",@$post_id);
+                            $product_count_view=get_field("zaproduct_count_view",@$post_id);
+                            ?>
+                            <div class="item">
+                                <div class="sale-off-on-day-box-item">
+                                    <div class="sale-off-box-hinh-tron">
+                                        <a href="<?php echo @$permalink; ?>">
+                                            <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
+                                        </a>
+                                        <?php
+                                        if(floatval(@$product_price_desc_percent) > 0){
+                                            ?>
+                                            <div class="sale-off-box">
+                                                <div class="sale-off-txt">Sale off</div>
+                                                <div class="sale-off-number"><?php echo floatval(@$product_price_desc_percent) ; ?>%</div>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>
+                                    <h3 class="sale-off-on-day-title">
+                                        <a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words(@$title,55, "[...]" ) ?></a>
+                                        <div class="post-kk-star-rating">
+                                            <?php echo do_shortcode( "[ratings]" ); ?>
+                                        </div>
+                                    </h3>
+                                    <div class="sale-off-on-day-price">
+                                        <span class="sale-off-on-day-sale-price"><?php echo fnPrice(@$product_sale_price) ; ?> ₫</span>
+                                        <?php
+                                        if(floatval(@$product_price) > floatval(@$product_sale_price)){
+                                            ?>
+                                            <span class="sale-off-on-day-sale-original-price"><?php echo fnPrice(@$product_price); ?> ₫</span>
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+                <?php
+                wp_reset_postdata();
+            }
+            ?>
         </div>
     </div>
-    <?php
-    get_footer();
-    ?>
+</div>
+</div>
+<?php
+get_footer();
+?>

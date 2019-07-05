@@ -1,6 +1,6 @@
 <?php
 class ProductModel{
-	private $_per_page =0;	
+	private $_per_page =0;
 	private $_sql;
 	private $_items;
 	private $_total_items;
@@ -8,12 +8,12 @@ class ProductModel{
 	private $_catID="";
 	private $_wpquery=array();
 	// items
-	public function __construct(){		
-		
+	public function __construct(){
+
 	}
 	public function setWpQuery($wpquery=array()){
 		$this->_wpquery=$wpquery;
-		
+
 	}
 	public function getWpQuery(){
 		return $this->_wpquery;
@@ -23,7 +23,7 @@ class ProductModel{
 	}
 	public function getCatID() {
 	  return $this->_catID;
-	}	 
+	}
 	public function setItems($items) {
   		$this->_items = $items;
 	}
@@ -43,45 +43,40 @@ class ProductModel{
 	}
 	public function getTotalPages() {
 	  return $this->_total_pages;
-	}	
+	}
 	// per_page
 	public function setPerpage($per_page) {
   		$this->_per_page = $per_page;
 	}
 	public function getPerpage() {
 	  return $this->_per_page;
-	}	
-	public function getLstNewProducts(){	
+	}
+	public function getLstNewProducts(){
 		global $wpdb;
-		$table = $wpdb->prefix . 'shk_product';	
+		$table = $wpdb->prefix . 'shk_product';
 		$sql = "SELECT p.id , p.product_sku , p.product_name , p.product_image , p.product_slug , p.product_status,p.product_price FROM {$table} p where p.product_status = 1 and p.product_new = 1 order by p.product_published_date DESC " ;
-		$result = $wpdb->get_results($sql,ARRAY_A);		
+		$result = $wpdb->get_results($sql,ARRAY_A);
 		return $result;
 	}
-	public function getLstBestSeller(){	
+	public function getLstBestSeller(){
 		global $wpdb;
-		$table = $wpdb->prefix . 'shk_product';	
+		$table = $wpdb->prefix . 'shk_product';
 		$sql = "SELECT p.id , p.product_sku , p.product_name , p.product_image , p.product_slug , p.product_status , p.product_price FROM {$table} p where p.product_status = 1 and p.product_best_seller = 1 order by p.product_published_date DESC " ;
-		$result = $wpdb->get_results($sql,ARRAY_A);		
+		$result = $wpdb->get_results($sql,ARRAY_A);
 		return $result;
 	}
-	public function getDetail(){	
+	public function getDetail(){
 		global $wpdb,$zController;
 		$id= $zController->getParams('id');
-		$table = $wpdb->prefix . 'shk_product';	
+		$table = $wpdb->prefix . 'shk_product';
 		$sql = "SELECT p.* FROM {$table} p where p.id =  " . $id;
-		$result = $wpdb->get_results($sql,ARRAY_A);		
+		$result = $wpdb->get_results($sql,ARRAY_A);
 		return $result;
 	}
-	public function prepare_items(){						
+	public function prepare_items(){
 		$this->setItems($this->table_data());
-		$this->setTotalIems($this->total_items());		
-		$wpQuery=new WP_Query();
-		$wpQuery=$this->table_data();		
-		if(count($wpQuery->posts) > 0){
-			$this->setTotalPages(ceil($this->getTotalItems()/$this->getPerpage()));
-		}					
-	}	
+		$this->setTotalIems($this->total_items());
+	}
 	private function total_items(){
 		$wpQuery=$this->getWpQuery();
 		$totalItems=0;
@@ -89,18 +84,17 @@ class ProductModel{
 		return $totalItems;
 	}
 	private function table_data(){
-		$wpQuery=$this->getWpQuery();		
-		$currentPage=1;	
-		if(!empty(@$_POST["filter_page"]))			
-            $currentPage=@$_POST["filter_page"];
-        $offset 	= ($currentPage - 1) * $this->getPerpage();	 	
+		$wpQuery=$this->getWpQuery();
+		$currentPage=1;
+		if(!empty(@$_POST["filter_page"]))	{
+			$currentPage=@$_POST["filter_page"];
+		}
+        $offset 	= ($currentPage - 1) * $this->getPerpage();
         $args = $wpQuery->query;
         $args["posts_per_page"]=$this->getPerpage();
         $args["offset"]=$offset;
         $args["paged"]=$currentPage;
-        $args['orderby']='id';
-        $args['order']='DESC';        
-		$wpQuery->query($args);				
+		$wpQuery->query($args);
 		return $wpQuery;
 	}
 }
